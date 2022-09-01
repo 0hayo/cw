@@ -67,7 +67,7 @@ export var _1t6Config: _1T6Config = existsClient
   : {
     ratioWarnThreshold: 70,
     maxWarnCount: 500,
-    bizServerAddress: getAppType() === "single" ? "192.168.1.105" : "192.168.168.168",
+    bizServerAddress: getAppType() === "single" ? "127.0.0.1" : "192.168.168.168",
     bizServerHttpPort: 8080,
     aiServerHttpPort: 8081,
     bizServerProtocol: "http",
