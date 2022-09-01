@@ -89,7 +89,7 @@ const McChatModal: FC<IProps> = props => {
         feed={props.feed}
         onClick={it => {
           // if (it.type === "rx") {
-            setUuid(it.uuid);
+          setUuid(it.uuid);
           // }
         }}
       />
@@ -148,7 +148,7 @@ const McChatModal: FC<IProps> = props => {
             //   isNaN(charOffset) || charOffset - PRE_OFFSET < 0 ? 0 : charOffset - PRE_OFFSET;
             const offset = found.origin?.offsets[position];
             player?.stop();
-            player.play(found.path, offset, found.length);
+            offset ? player.play(found.path, offset, found.length) : player.play("/home/szt/.morsed/files//sound/202207251628250ccac01500624aa9bb833d9d56a67073.raw", 517011, 1498968);
           }}
         />
         <McBox textAlign="center">

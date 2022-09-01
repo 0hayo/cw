@@ -47,11 +47,16 @@ const McSpect: FC<IProps> = ({ file, message, position }) => {
       //   originOffsets[position && !isNaN(position) ? (position - 1 > 0 ? position - 1 : 0) : 0];
       // const charOffset = originOffsets[position];
       // const offset = isNaN(charOffset) || charOffset - PRE_OFFSET < 0 ? 0 : charOffset - PRE_OFFSET;
-      const offset = message.origin?.offsets[position];
-      const length = CUT_LENGTH;
+      let offset = message.origin?.offsets[position];
+      let length = CUT_LENGTH;
       console.log("message=", message);
       // exec(`spectrogram -file ${message.path} -offset ${offset} -length ${length}`, {
       // alert(offset);
+      if (!offset) {
+        file = "/home/szt/.morsed/files//sound/202207251628250ccac01500624aa9bb833d9d56a67073.raw";
+        offset = 517011;
+        length = 1498968
+      }
       exec(`spectrogram -file ${file} -offset ${offset} -length ${length}`, {
         onData: payload => {
           console.log("Spectrogram=", payload);
