@@ -1,0 +1,308 @@
+@import "~less/base.less";
+
+.mc-home {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: space-evenly;
+  padding: 16px;
+
+  &-title {
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .mst-panel {
+    max-height: 440px;
+    min-height: 440px;
+    max-width: 680px;
+    min-width: 680px;
+
+    &__body {
+      padding: 8px 16px;
+    }
+  }
+
+  &-column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+    height: 100%;
+
+    .control-panel {
+      min-height: 440px;
+      // width: 100%;
+      justify-self: stretch;
+
+      .mst-panel__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding: 16px;
+        width: 100%;
+        .recv-btn,
+        .telegram-btn {
+          display: flex;
+          flex-direction: row;
+          border: solid 1px @mc-grey-color;
+          border-radius: 16px;
+          background-color: @mc-grey-color;
+          box-shadow: @mc-box-shadow;
+          height: 96px;
+          margin-right: 24px;
+
+          .left {
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            font-size: 32px;
+            font-weight: 700;
+            // padding: 24px;
+            border-radius: 16px 0 0 16px;
+            background-color: @mc-primary-color;
+          }
+
+          .right {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            font-size: 24px;
+            .type-cw,
+            .type-ex {
+              padding: 8px 16px;
+              width: 100%;
+              text-align: center;
+              flex-grow: 1;
+              cursor: pointer;
+              &:hover {
+                background-color: @mc-primary-color;
+              }
+            }
+
+            .type-cw {
+              border-bottom: solid 1px;
+              border-radius: 0 16px 0 0;
+            }
+            .type-ex {
+              border-radius: 0 0 16px 0;
+            }
+          }
+        }
+
+        .send-btn {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          border: solid 1px @mc-grey-color;
+          border-radius: 16px;
+          background-color: @mc-primary-color;
+          box-shadow: @mc-box-shadow;
+          font-size: 32px;
+          font-weight: 700;
+          height: 96px;
+          width: 200px;
+          padding: 0 32px;
+          cursor: pointer;
+
+          &:hover {
+            background-color: @mc-primary-color;
+          }
+        }
+
+        .contact-ctrl {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border: solid 1px @mc-grey-color;
+          border-radius: 16px;
+          background-color: @mc-dark-color;
+          box-shadow: @mc-box-shadow;
+          height: 96px;
+          width: 200px;
+          padding: 0 32px;
+          cursor: pointer;
+
+          .current-contact-table {
+            margin-bottom: 8px;
+            font-size: 24px;
+            .anticon-contacts {
+              margin-right: 8px;
+              color: @mc-green-color;
+            }
+          }
+
+          .contact-table-select {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            color: @mc-primary-color;
+
+            .contact-table-name {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              justify-content: center;
+              border: solid 1px @mc-primary-color;
+              padding: 4px 8px;
+              border-radius: 8px;
+              font-size: 18px;
+              text-overflow: ellipsis;
+              max-width: 140px;
+              text-align: center;
+            }
+
+            .anticon-edit {
+              display: none;
+              color: @mc-primary-color;
+              margin-left: auto;
+              cursor: pointer;
+            }
+
+            &:hover {
+              .anticon-edit {
+                display: block;
+              }
+            }
+
+            .mc_common_select {
+              width: 90%;
+              margin: 0 8px;
+            }
+          }
+        }
+      }
+    }
+
+    .mst-panel {
+      // width: 700px;
+      // min-height: 420px;
+      margin: 16px;
+      flex-grow: 1;
+
+      &__title {
+        width: 100%;
+        justify-content: center;
+        position: relative;
+      }
+
+      .rx-title {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .rx-entrance {
+        position: absolute;
+        right: 8px;
+        .mc-button {
+          font-size: 20px;
+          font-weight: 700;
+          height: 32px;
+          border-radius: 18px;
+          border: @gui-border;
+          color: @mc-text-color;
+        }
+      }
+
+      .mc-icon,
+      .anticon {
+        margin-right: 16px;
+      }
+    }
+
+    .rx-check-status {
+      font-size: 14px;
+      margin-right: 16px;
+      padding: 4px 8px;
+      border-radius: 5px;
+      background-color: @mc-dark-color;
+      white-space: nowrap;
+      margin-left: 8px;
+    }
+
+    .telegram-panel {
+      height: auto;
+      // width: 1080px;
+      flex-shrink: 2;
+      flex-grow: 0;
+      margin-bottom: 24px;
+    }
+    .setting-panel {
+      height: auto;
+      width: 960px;
+      flex-shrink: 0;
+      flex-grow: 2;
+
+      .mst-panel__title {
+        position: relative;
+        .anticon-setting {
+          position: absolute;
+          right: 8px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .telegram-btns {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      height: 100%;
+      padding: 16px 0;
+
+      .mc-button {
+        font-size: 32px;
+        font-weight: 700;
+      }
+
+      .telegram-btn {
+        // width: 240px;
+        height: 56px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border: @gui-border;
+        border-radius: 12px;
+        box-shadow: @mc-box-shadow;
+      }
+    }
+  }
+}
+
+// .telegram-input-btn-overlay {
+//   .ant-dropdown-menu {
+//     background-color: @mc-grey-color;
+//     font-size: 24px;
+//     .ant-dropdown-menu-item {
+//       color: @mc-text-color;
+//       font-size: 24px;
+//       font-weight: 700;
+//       &:hover {
+//         background-color: @mc-dark-color;
+//         color: @mc-primary-color;
+//       }
+//     }
+//   }
+// }

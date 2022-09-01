@@ -1,0 +1,45 @@
+@import "~less/theme.less";
+
+.mc-audio-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #424242;
+  border-radius: 8px;
+  font-size: 20px;
+  color: @mc-text-color;
+  padding: 4px 16px 6px 16px;
+  margin: 8px 8px;
+  height: 40px;
+  float: left;
+  width: 80%;
+  cursor: pointer;
+
+  .audio-time {
+    margin: 0 16px;
+    line-height: 100%;
+    padding-top: 2px;
+  }
+
+  .audio-unread {
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    border: none;
+    background-color: @mc-danger-color;
+    margin-bottom: 16px;
+    margin-left: auto;
+  }
+}
+
+.audio-right {
+  justify-content: flex-end;
+  background-color: #8692e8;
+  color: @mc-dark-color;
+  margin-left: auto;
+
+  .audio-unread {
+    margin-right: auto;
+    margin-left: 0;
+  }
+}

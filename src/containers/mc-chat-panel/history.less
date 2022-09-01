@@ -1,0 +1,93 @@
+@import "~less/theme.less";
+
+.mc-chat-panel .mc-chat-history {
+  border-radius: 4px;
+  margin-bottom: 4px;
+  background-color: @mc-dark-color;
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  flex: 1 0;
+
+  &__list {
+    flex: 1 0;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+      background-color: #000;
+    }
+  }
+
+  &__feed {
+    height: 30px;
+    padding: 0 12px;
+    line-height: 30px;
+    border: 1px solid #161826;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  &__item {
+    margin: 12px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    &--tx {
+      justify-content: flex-end;
+    }
+  }
+
+  &__inner {
+    margin: 0 6px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: @mc-grey-color;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+
+    &:active {
+      opacity: 0.8;
+    }
+
+    .mc-chat-history__text--tx {
+      background-color: @mc-primary-color;
+    }
+  }
+
+  &__audio {
+    padding: 2px 8px;
+    // background-color: #b8b9bd;
+    background-color: @mc-title-bg-color;
+  }
+
+  &__text {
+    padding: 2px 8px;
+    font-size: 18px;
+    word-break: break-word;
+
+    &--mine {
+      background-color: @mc-grey-color;
+    }
+  }
+  &__time {
+    font-size: 16px;
+  }
+
+  &__voice {
+    padding: 0;
+    width: 36px;
+    height: 18px;
+    font-size: 12px;
+    line-height: 18px;
+    border-radius: 2px;
+    margin-right: 10px;
+    // background-color: @mc-primary-color;
+    display: inline-block;
+    text-align: center;
+  }
+}

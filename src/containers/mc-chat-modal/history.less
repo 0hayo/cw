@@ -1,0 +1,72 @@
+@import "~less/theme.less";
+
+.mc-chat-modal .mc-chat-history {
+  // width: 268px;
+  // flex-grow: 1;
+  // flex-shrink: 0;
+  border-radius: 4px;
+  background-color: @mc-dark-color;
+  box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 2px;
+    background-color: #000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: #32c5ff;
+  }
+
+  &__item {
+    margin: 12px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+
+    &--tx {
+      justify-content: flex-end;
+    }
+  }
+
+  &__inner {
+    margin: 0 6px;
+    border-radius: 2px;
+    color: #fff;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: #646464;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__audio {
+    padding: 2px 8px;
+    // background-color: #b8b9bd;
+
+    &--active {
+      background-color: @mc-title-bg-color;
+    }
+  }
+
+  &__text {
+    padding: 2px 8px;
+    font-size: 18px;
+
+    &--mine {
+      background-color: #505788;
+    }
+
+    &--active {
+      color: #32c5ff;
+    }
+  }
+
+  &__time {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,59 @@
+.mc-send-card {
+  line-height: 1;
+  width: 268px;
+  padding: 6px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+
+  & + & {
+    margin-top: 16px;
+  }
+
+  &__title {
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+
+    span {
+      padding-left: 8px;
+    }
+  }
+
+  &__extra {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__text {
+    color: #fff;
+    font-size: 18px;
+  }
+
+  &__time {
+    color: #32c5ff;
+    font-size: 24px;
+    text-align: center;
+    margin-right: -8px;
+  }
+
+  &__date {
+    font-size: 16px;
+    padding-top: 8px;
+    text-align: center;
+    margin-right: -8px;
+  }
+
+  &__btns {
+    display: flex;
+    flex: 1 1;
+    align-items: center;
+    justify-content: space-around;
+    padding: 8px 0 8px 0;
+  }
+}

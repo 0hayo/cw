@@ -1,0 +1,51 @@
+@import "~less/theme.less";
+
+.mc-json-viewer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+  background-color: @mc-grey-color;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 40%;
+
+  &__inner {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    pre {
+      border-radius: 8px;
+      background-color: @mc-text-color;
+      color: @mc-dark-color;
+      text-align: left;
+      margin: 8px;
+      padding: 48px;
+      font-size: 20px;
+      overflow-y: auto;
+    }
+  }
+
+  &__filename {
+    position: absolute;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 24px;
+    padding: 4px;
+    border-radius: 0 0 8px 8px;
+    background-color: #00a2ff50;
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    .ant-btn {
+      margin: 16px 12px 24px;
+    }
+  }
+}

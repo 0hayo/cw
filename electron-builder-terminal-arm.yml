@@ -1,0 +1,27 @@
+appId: swos-terminal
+artifactName: swos-terminal-${version}-arm64.${ext}
+compression: store
+productName: SWOS-Terminal
+asar: true
+directories:
+  output: dist
+linux:
+  target:
+    - {target: deb, arch: arm64}
+  icon: "./build/icons/"
+  executableName: swos-terminal
+  category: Utility
+  description: 短波摩尔斯码智能收发报终端
+  vendor: Sensitel
+  desktop:
+    Name: SWOS-Terminal
+    Name[zh_CN]: 短波摩尔斯码智能收发报终端
+    Comment: Smart Morse Code Terminal
+    Comment[zh_CN]: 短波摩尔斯码智能收发报终端
+    Terminal: false
+    Type: Application
+    Icon: "/opt/SWOS-Terminal/resources/app/build/icons/512x512.png"
+files:
+  - "./build/"
+  - "./lib/"
+  - "./package.json"

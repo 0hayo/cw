@@ -1,0 +1,38 @@
+@import "~less/theme.less";
+
+.mc-clock {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+
+  &__date {
+    line-height: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    color: @mc-green-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    // margin-left: 8px;
+    // padding-left: 8px;
+    // border-left: solid 1px @mc-grey-color;
+  }
+
+  &__time {
+    font-family: "Uroob-bold";
+    line-height: 32px;
+    color: @mc-text-color;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  &__divider {
+    width: 1px;
+    height: 36px;
+    margin: 0 8px;
+    border: solid 1px @mc-grey-color;
+  }
+}

@@ -1,0 +1,128 @@
+@import "~less/theme.less";
+
+.mc-tx-code-page {
+  // margin: 20px;
+
+  .telegram-title {
+    padding: 16px 0;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 500;
+    text-align: center;
+    background-color: @mc-title-bg-color;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .all-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(46, 50, 78, 0.7);
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    backdrop-filter: blur(30px);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 8px 20px 0 20px;
+    height: 100%;
+
+    .mc-body-area {
+      display: flex;
+      flex-direction: row;
+      align-items: stretch;
+      flex-grow: 1;
+
+      .mc-ex-editor {
+        width: 100%;
+      }
+      .mc-editor {
+        flex-shrink: 0;
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        .mc-editor-head {
+          display: flex;
+          flex-grow: 1;
+          flex-direction: column;
+          .mc-editor__row {
+            flex-grow: 2;
+          }
+        }
+
+        .mc-editor-body {
+          flex-grow: 3;
+          display: flex;
+          flex-direction: column;
+
+          .mc-editor__row {
+            // min-height: 6px;
+            flex-grow: 1;
+
+            &:last-child {
+              border-bottom: 1px solid #161826;
+            }
+          }
+        }
+      }
+    }
+    .mc-foot-area {
+      flex-grow: 0;
+      display: flex;
+      align-items: center;
+      background-color: @mc-black-bg-color;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      width: 100%;
+      padding: 8px 16px;
+    }
+
+    .ant-btn {
+      margin: 0 8px;
+    }
+
+    .ant-pagination {
+      flex: 1;
+    }
+  }
+}
+
+.mc-divider {
+  width: 2px;
+  height: 68px;
+  margin: 0 16px;
+  background-color: @mc-grey-color;
+}
+
+.mc-info-card {
+  border-radius: 4px;
+  background-color: #161c35;
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 380px;
+  min-height: 70px;
+  margin-right: 32px;
+  position: relative;
+
+  &__warn {
+    position: absolute;
+    width: 380px;
+    height: 70px;
+    font-size: 16px;
+    background-color: #e02020;
+    padding: 4px 12px 8px 12px;
+    display: none;
+  }
+
+  &__tips {
+    // position: absolute;
+    // width: 260px;
+    color: #32c5ff;
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 4px 12px 8px 12px;
+  }
+}

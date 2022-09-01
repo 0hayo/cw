@@ -1,0 +1,181 @@
+@import "~less/theme.less";
+
+.phrase_title {
+  width: 100%;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  color: @gui-text-color;
+  font-size: 20px;
+  background-color: transparent;
+  margin-top: 16px;
+
+  .phrase_title_text {
+    padding: 16px;
+    min-width: 120px;
+    text-align: center;
+    font-weight: 700;
+    background-color: @mc-dark-color;
+    border-radius: 15px 15px 0 0;
+    cursor: pointer;
+  }
+
+  .active {
+    color: @gui-title-color;
+    background-color: @mc-grey-color;
+  }
+}
+
+.phrase {
+  height: 100%;
+  border-radius: 0px 10px 10px 10px;
+  background: @mc-grey-color;
+  padding: 8px 16px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  .phrase-table-head {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: @mc-title-bg-color;
+
+    div {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      padding: 8px 0;
+    }
+    .head-name {
+      width: 40%;
+      border-right: 1px solid @gui-active3-color;
+    }
+    .head-text {
+      width: 40%;
+      border-right: 1px solid @gui-active3-color;
+      margin-right: 4px;
+    }
+    .head-edit {
+      width: 20%;
+      flex-grow: 2;
+    }
+  }
+
+  .phrase_content {
+    width: 100%;
+    overflow: auto;
+    // padding-bottom: 50px;
+    height: 100%;
+
+    .phrase_content_list_item {
+      // line-height: 40px;
+      height: 36px;
+      display: flex;
+      // flex-direction: column;
+      align-items: center;
+      margin-top: 2px;
+      box-sizing: border-box;
+      background: @mc-dark-color;
+      font-size: 20px;
+
+      .list_left {
+        width: 40%;
+        border-right: 1px solid @gui-active3-color;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        padding-left: 24px;
+        box-sizing: border-box;
+
+        .list_name {
+          height: 100%;
+          color: @gui-text-color;
+          text-align: center;
+        }
+        .list_input {
+          flex: 1;
+          border: 0;
+          color: @mc-text-color;
+          height: 100%;
+          background: transparent;
+          outline: none;
+        }
+        .list_input:focus {
+          border: none;
+        }
+      }
+      .list_right {
+        width: 40%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding-left: 24px;
+        box-sizing: border-box;
+        border-right: 1px solid @gui-active3-color;
+
+        .list_name {
+          color: @gui-text-color;
+        }
+        .list_input {
+          flex: 1;
+          border: 0;
+          color: @mc-green-color;
+          height: 100%;
+          background: transparent;
+          outline: none;
+        }
+        .list_input:focus {
+          border: none;
+        }
+        .list_left_icon {
+          font-size: 16px;
+          color: #fff;
+          margin-right: 20px;
+          cursor: pointer;
+        }
+      }
+
+      .list_edit {
+        width: 20%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+
+        .anticon-save,
+        .anticon-edit {
+          color: @mc-warning-color;
+        }
+        .anticon-close-circle {
+          color: @mc-danger-color;
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+
+  .phrase_add {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 32px;
+    bottom: 32px;
+    padding: 16px;
+    border-radius: 32px;
+    font-size: 32px;
+    background-color: @mc-primary-color;
+    color: @mc-text-color;
+    cursor: pointer;
+
+    &:hover {
+      color: @mc-green-color;
+    }
+  }
+}

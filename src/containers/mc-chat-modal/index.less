@@ -1,0 +1,77 @@
+@import "~less/theme.less";
+
+.mc-chat-modal {
+  max-width: 1600px;
+
+  &__flex {
+    flex: 2 0;
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    min-width: 998px;
+    max-width: 998px;
+  }
+
+  .mc-ratio-graph {
+    height: 100px;
+    margin-bottom: 14px;
+  }
+
+  .ant-modal-content {
+    .ant-modal-body {
+      .modal_content {
+        height: 900px;
+        display: flex;
+        flex-direction: row;
+
+        .mc-chat-history {
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  .mc-chat-phrase {
+    width: 300px;
+    padding: 24px 16px;
+    border-radius: 4px;
+    background-color: @mc-dark-color;
+    box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  }
+
+  .mc-chat-text {
+    flex: 1;
+
+    &__title {
+      color: #32c5ff;
+      font-size: 20px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &__area {
+      border: 0;
+      outline: 0;
+      width: 100%;
+      height: 90%;
+      padding: 4px;
+      font-size: 18px;
+      border-radius: 4px;
+      resize: none;
+      color: #fff;
+      background-color: transparent;
+      box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    &__origin {
+      color: #fff;
+      overflow: auto;
+    }
+  }
+
+  .btn-back {
+    top: 0;
+    right: 0;
+    position: absolute;
+  }
+}

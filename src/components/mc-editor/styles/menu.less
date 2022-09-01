@@ -1,0 +1,36 @@
+@import "~less/theme.less";
+
+.mc-editor-menu {
+  z-index: 100;
+  font-size: 14px;
+  // line-height: 12px;
+  color: @mc-green-color;
+  border: solid 1px @mc-grey-color;
+  // border-right: 1px solid #161826;
+  // background-color: #ffffe9;
+  padding: 4px;
+  background-color: @mc-primary-color;
+
+  cursor: pointer;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
+
+  &:active {
+    background-color: #fff;
+  }
+  &:hover {
+    background-color: @mc-title-bg-color;
+  }
+
+  .mc-icon,
+  .anticon {
+    font-size: 17px;
+    margin-bottom: 5px;
+    margin-right: 8px;
+  }
+
+  border-radius: 5px;
+}

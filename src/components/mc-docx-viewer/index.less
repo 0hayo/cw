@@ -1,0 +1,97 @@
+@import "~less/theme.less";
+
+.mc-docx-viewer {
+  display: flex;
+  flex-direction: column;
+  margin-right: 12px;
+  background-color: @mc-grey-color;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
+
+  &__tips {
+    text-align: center;
+    margin-top: 350px;
+    font-size: 24px;
+    color: @mc-primary-color;
+  }
+
+  &__inner {
+    flex: 1;
+    flex-shrink: 1;
+    position: relative;
+  }
+
+  &__docs {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 16px;
+    position: absolute;
+    background-color: cornsilk;
+
+    &-name {
+      position: absolute;
+      width: 50%;
+      margin-left: 25%;
+      text-align: center;
+      padding: 4px;
+      border-radius: 0 0 8px 8px;
+      background-color: #00a2ff50;
+    }
+
+    &-inner {
+      overflow: auto;
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    &-doc {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    &-prev {
+      top: 35%;
+      left: 0;
+      width: 48px;
+      height: 120px;
+      z-index: 20;
+      line-height: 120px;
+      cursor: pointer;
+      position: absolute;
+      text-align: center;
+      background-color: @mc-grey-color;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+      border-top-left-radius: 12px;
+      border-bottom-left-radius: 12px;
+    }
+
+    &-next {
+      top: 35%;
+      right: 0;
+      width: 48px;
+      height: 120px;
+      z-index: 20;
+      line-height: 120px;
+      cursor: pointer;
+      position: absolute;
+      text-align: center;
+      background-color: @mc-grey-color;
+      box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+      border-top-right-radius: 12px;
+      border-bottom-right-radius: 12px;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+
+    .ant-btn {
+      margin: 16px 12px 24px;
+    }
+  }
+}

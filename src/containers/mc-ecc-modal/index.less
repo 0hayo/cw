@@ -1,0 +1,39 @@
+@import "~less/theme.less";
+
+.mc-ecc-modal {
+  &__title {
+    color: #32c5ff;
+    font-size: 16px;
+    line-height: 16px;
+    margin-bottom: 24px;
+  }
+
+  .ant-radio-group {
+    width: 104px;
+    flex-shrink: 0;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .ant-radio-button-wrapper {
+    color: #b7b7b7;
+    border: 1px solid #b7b7b7;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    background-color: transparent;
+
+    &:hover {
+      color: @mc-primary-color;
+    }
+  }
+
+  .ant-radio-button-wrapper:not(:first-child)::before {
+    display: none;
+  }
+
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled) {
+    color: @mc-primary-color;
+    border: 1px solid @mc-primary-color;
+  }
+}

@@ -1,0 +1,84 @@
+@import "~less/theme.less";
+
+.mc-top-menu {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: nowrap;
+  text-align: center;
+  border: solid 0px red;
+  height: 16px;
+  width: 48px;
+  position: absolute;
+
+  .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: @mc-modal-bg-color;
+    box-shadow: @mc-box-shadow;
+    backdrop-filter: blur(20px);
+    border-radius: 4px;
+    padding: 8px 8px;
+    margin-top: 12px;
+    transition: margin 0.8s;
+    -webkit-transition: margin 0.8s;
+    z-index: 9999;
+
+    .menu-button {
+      color: #fff;
+      border: none;
+      margin: 4px;
+      height: 32px;
+      width: 100%;
+      background: linear-gradient(180deg, @mc-primary-color 0%, @mc-grey-color 100%);
+      border-radius: 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 24px;
+
+      .anticon {
+        font-size: 20px;
+      }
+
+      .menu-buttons {
+        margin-right: -1000px;
+        transition: margin 0.8s;
+        -webkit-transition: margin 0.8s;
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        background: linear-gradient(180deg, @mc-grey-color 0%, @mc-primary-color 100%);
+        box-shadow: 0px 0px 4px #121a39;
+        backdrop-filter: blur(20px);
+        color: @mc-green-color;
+      }
+    }
+    .menu-divider {
+      width: 2px;
+      height: 30px;
+      background: #505788;
+      border-radius: 1px;
+      flex: none;
+    }
+  }
+  .menu-buttons-hide {
+    // margin-top: 50px;
+    margin-right: -500px;
+    transition: margin 0.8s;
+    -webkit-transition: margin 0.8s;
+  }
+
+  .animated-enter {
+    animation: 0.8s flipInX ease;
+  }
+
+  .animated-leave {
+    animation: 0.5s flipOutX ease;
+  }
+}

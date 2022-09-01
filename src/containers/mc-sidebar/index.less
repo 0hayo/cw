@@ -1,0 +1,65 @@
+@import "~less/base.less";
+
+.mc-sidebar {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 24px;
+  padding-bottom: 40px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.5);
+  background-repeat: no-repeat;
+  background-size: 8px 15px;
+  background-position: 4px 4px;
+  background-image: url(../../images/radio4.png);
+  z-index: 99;
+
+  .radio-name {
+    text-align: center;
+    margin: 16px 8px;
+    background-color: #32c5ff38;
+    border-radius: 4px;
+    color: @gui-title-color;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+  .login-user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &-avatar {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      align-items: center;
+      justify-content: flex-end;
+      font-size: 32px;
+    }
+
+    &-name {
+      position: absolute;
+      width: 90%;
+      padding: 2px 8px;
+      font-size: 12px;
+      // margin: 8 0 8 0px;
+      margin-top: auto;
+      text-align: center;
+      // background-color: @mc-dark-color;
+      background-color: #32c5ff38;
+      border-radius: 4px;
+      color: @gui-title-color;
+    }
+
+    &-group {
+      padding: 4px 16px;
+      font-size: 12px;
+      margin: 6px;
+      text-align: center;
+      background-color: @mc-dark-color;
+      border-radius: 4px;
+      color: @gui-text-color;
+    }
+  }
+}

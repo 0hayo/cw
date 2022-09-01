@@ -1,0 +1,146 @@
+@import "~less/base.less";
+
+.mc-import-page {
+  .mc-body {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .mc-body-area {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mc-list-area-wrapper {
+    flex: 1;
+    margin: 12px 12px 0;
+    height: 0;
+    overflow: auto;
+
+    .mc-list-area {
+      flex: 1;
+      display: flex;
+      overflow: auto;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+  }
+
+  .mc-file-card {
+    padding: 8px;
+    margin: 12px;
+    width: 148px;
+    height: 200px;
+    line-height: 18px;
+    border-radius: 4px;
+    background: @mc-grey-color;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    background-size: 60px 80px;
+    background-position: 8px 8px;
+    background-image: url("../../../images/file.png");
+    background-repeat: no-repeat;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    &__checked {
+      box-shadow: 0 0 16px 0 #32c5ff;
+      background-color: #505788;
+    }
+
+    &__ext {
+      width: 60px;
+      height: 80px;
+      font-size: 20px;
+      padding-top: 40px;
+      padding-left: 8px;
+      color: #fff;
+    }
+
+    &__name {
+      flex: 1;
+      color: #32c5ff;
+      margin-top: 25px;
+      overflow: hidden;
+    }
+
+    &__mask {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      opacity: 0;
+      display: flex;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(46, 50, 78, 0.9);
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__extra {
+      height: 80px;
+      flex: 1;
+    }
+
+    &__delete {
+      right: 5px;
+      bottom: 5px;
+      position: absolute;
+      &:hover {
+        color: @mc-danger-color;
+      }
+    }
+    &__check {
+      right: 48px;
+      bottom: 12px;
+      position: absolute;
+
+      .ant-checkbox-inner {
+        border: 2px #29a9ff solid;
+        border-radius: 15px;
+        // background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
+
+  .mc-file-filter {
+    margin-left: 24px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: #2e324e;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    align-items: center;
+    position: relative;
+    display: flex;
+  }
+
+  .mc-file-search {
+    left: 25px;
+    font-size: 18px;
+    position: absolute;
+  }
+
+  .mc-file-input {
+    outline: 0;
+    width: 198px;
+    height: 32px;
+    padding-left: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+  }
+
+  .mc-file-label {
+    width: 70px;
+    margin-left: 40px;
+  }
+}

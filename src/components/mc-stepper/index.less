@@ -1,0 +1,35 @@
+.mc-stepper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  &__value {
+    width: 36px;
+    height: 32px;
+    font-size: 18px;
+    line-height: 32px;
+    color: #32c5ff;
+    background-color: #000;
+    text-align: center;
+  }
+
+  &__increase,
+  &__decrease {
+    border: 0;
+    padding: 0;
+    width: 32px;
+    height: 32px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  &__increase {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  &__decrease {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}

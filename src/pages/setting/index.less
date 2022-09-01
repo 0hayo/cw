@@ -1,0 +1,83 @@
+@import "~less/base.less";
+
+.user {
+  height: 100%;
+  width: 100%;
+  padding: 8px 20px 20px 20px;
+  display: flex;
+  flex-direction: row;
+
+  .user_title {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    background: @gui-base-color;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    border: @gui-border;
+
+    .user_detail {
+      height: 100%;
+      box-sizing: border-box;
+    }
+
+    .set_user {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: @gui-a-color;
+      font-size: 14px;
+      text-decoration-line: underline;
+      padding-left: 60px;
+      box-sizing: border-box;
+    }
+  }
+
+  // 左侧终端管理选择
+  .device {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+
+    .content_left {
+      // width: 50%;
+      // height: 180px;
+      // padding: 0 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border-bottom: solid 2px @mc-primary-color;
+      margin-top: 0;
+      margin-bottom: 16px;
+
+      .content_list {
+        // height: 32px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: @mc-green-color;
+        font-size: 24px;
+        font-weight: 700;
+        padding: 8px 24px;
+        cursor: pointer;
+        background-color: @mc-dark-color;
+
+        .anticon {
+          font-size: 24px;
+          margin-right: 16px;
+        }
+      }
+
+      .active {
+        color: @mc-primary-color !important;
+        background-color: @mc-grey-color;
+      }
+    }
+  }
+}

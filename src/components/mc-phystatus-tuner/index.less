@@ -1,0 +1,73 @@
+.mc-pystatus-tuner {
+  &__status {
+    color: #fff;
+    padding: 0px 16px 16px 16px;
+    display: grid;
+    grid-template-columns: 10% 20% 10% 20% 20% 20%;
+  }
+
+  &__dynamic {
+    color: #52c41a;
+    text-align: right;
+    padding-right: 16px;
+  }
+
+  &__preset {
+    color: #29a9ff;
+    text-align: right;
+    padding-right: 16px;
+  }
+
+  &__tuning {
+    color: #0074d9;
+    text-align: right;
+    width: 70px;
+    height: 22px;
+  }
+
+  .ant-btn-sm {
+    margin-right: 16px;
+  }
+}
+
+.btn-tuner {
+  border: 0;
+  border: solid 2px #32c5ff;
+  background: transparent;
+  border-radius: 10px;
+  color: #32c5ff;
+  width: 40px;
+  height: 32px;
+  text-align: center;
+  line-height: 2;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+.ant-popover-placement-bottom > .ant-popover-content > .ant-popover-arrow {
+  border-top-color: #161826;
+  border-right-color: #161826;
+  border-bottom-color: #161826;
+  border-left-color: #161826;
+}
+
+.ant-popover-inner {
+  background-color: #161826;
+}
+
+.ant-popover-inner-content {
+  color: #32c5ff;
+}
+
+.ant-popover-title {
+  color: #0091ff;
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 145, 255, 0.2);
+}
+
+.ant-popover {
+  min-width: 400px;
+}

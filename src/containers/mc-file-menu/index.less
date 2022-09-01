@@ -1,0 +1,32 @@
+@import "~less/theme.less";
+
+.mc-file-menu {
+  width: 88px;
+  height: 100%;
+  border-radius: 4px;
+  overflow: auto;
+  text-align: center;
+  background-color: @mc-grey-color;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+
+  &__head {
+    height: 40px;
+    line-height: 40px;
+    color: #32c5ff;
+    background-color: #505788;
+  }
+
+  &__item {
+    margin: 16px 0;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #505788;
+    }
+
+    &--active {
+      color: #32c5ff;
+      background-color: #505788;
+    }
+  }
+}

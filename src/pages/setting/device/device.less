@@ -1,0 +1,157 @@
+@import "~less/theme.less";
+
+.device_body {
+  flex: 1;
+  // height: 90%;
+  overflow: unset;
+  margin-left: 20px;
+  border-radius: 8px;
+  background: @gui-base-color;
+  padding: 20px;
+  box-sizing: border-box;
+  border: @gui-border;
+
+  .device_ul {
+    width: 100%;
+    overflow: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: flex-start;
+
+    .device_list {
+      width: 300px;
+      padding: 8px 20px 10px 20px;
+      box-sizing: border-box;
+      background: @gui-background-color;
+      border-radius: 8px;
+      margin-right: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      border: @gui-border;
+      user-select: text;
+
+      .device_list_title {
+        color: @gui-title-color;
+        font-size: 20px;
+        text-align: center;
+        margin-top: 4px;
+        // margin-bottom: 8px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 80%;
+      }
+
+      .device_list_edit_btn {
+        position: absolute;
+        font-size: 24px;
+        font-weight: 500;
+        color: @mc-green-color;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 32px;
+        margin-top: 4px;
+
+        .edit_btn {
+          cursor: pointer;
+          margin-right: 8px;
+        }
+
+        .save_btn {
+          color: @mc-warning-color;
+        }
+      }
+
+      .device_list_img {
+        width: 100%;
+        margin: 10px 0;
+        display: flex;
+        justify-content: center;
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .device_content_from {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .content_from_list {
+        padding: 8px 0;
+        width: 100%;
+        font-size: 14px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .content_from_name {
+          width: 100%;
+          color: @gui-text-color;
+          font-size: 16px;
+        }
+
+        .content_from_flex {
+          display: flex;
+          justify-content: space-between;
+          font-size: 16px;
+          align-items: center;
+          margin-top: 4px;
+
+          .content_from_text {
+            flex: 1;
+            font-size: 20px;
+            color: @gui-title-color;
+            margin-left: 8px;
+            margin-top: 8px;
+            align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            &_readonly {
+              color: @mc-text-color;
+              // cursor: not-allowed;
+            }
+
+            &_green {
+              color: @mc-green-color;
+            }
+
+            &_warning {
+              color: @mc-warning-color;
+            }
+
+            &_wrap {
+              word-wrap: break-word !important;
+              word-break: break-all;
+            }
+          }
+
+          .auth-btn {
+            margin-left: auto;
+            margin-right: 16px;
+            font-size: 16px;
+            font-weight: 500;
+          }
+
+          .content_from_select {
+            margin-left: 8px;
+            margin-top: 8px;
+          }
+
+          .from_text_icon {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}

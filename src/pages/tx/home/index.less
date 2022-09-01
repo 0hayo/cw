@@ -1,0 +1,53 @@
+@import "~less/theme.less";
+
+.mc-send-page {
+  .mc-body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    // margin-left: -80px;
+  }
+
+  &__image {
+    width: 672px;
+    height: 441px;
+    flex-shrink: 0;
+    margin-left: -@mc-sidebar-width;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(../../../images/send.png);
+  }
+
+  &__board {
+    color: #32c5ff;
+    width: 672px;
+    height: 168px;
+    padding: 16px;
+    flex-shrink: 0;
+    margin-top: 128px;
+    border-radius: 4px;
+    margin-left: -@mc-sidebar-width;
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.5);
+
+    &-title {
+      display: flex;
+      font-size: 18px;
+      line-height: 1;
+      align-items: center;
+      padding-bottom: 38px;
+    }
+
+    .ant-btn {
+      margin-right: 16px;
+    }
+  }
+
+  &__panel {
+    top: @mc-header-height + 22px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1;
+    position: fixed;
+  }
+}

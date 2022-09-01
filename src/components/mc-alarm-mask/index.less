@@ -1,0 +1,39 @@
+@import "~less/theme.less";
+
+.mc-alarm-mask {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1001;
+  background-color: rgba(101, 103, 219, 0.57);
+
+  //-----------背景闪烁效果 -------
+  @keyframes alarm-mask {
+    from {
+      background-color: #6567db91;
+      opacity: 0.6;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    to {
+      background-color: #e62766;
+      opacity: 0.8;
+    }
+  }
+  @-webkit-keyframes alarm-mask {
+    from {
+      background-color: #6567db91;
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.4;
+    }
+    to {
+      background-color: #e62766;
+      opacity: 0.8;
+    }
+  }
+}

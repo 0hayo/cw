@@ -1,0 +1,40 @@
+@import "~less/theme.less";
+
+.mst-panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  background-color: @mc-modal-bg-color;
+  backdrop-filter: blur(5px);
+  box-shadow: @mc-box-shadow;
+
+  &__icon {
+    margin: 8px 16px 8px 8px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+    color: @mc-title-color;
+    padding: 0 16px;
+    background-color: @mc-title-bg-color;
+    height: 48px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__body {
+    flex: 1;
+    padding: 16px;
+    overflow: auto;
+    position: relative;
+  }
+}

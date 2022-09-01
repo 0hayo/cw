@@ -1,0 +1,215 @@
+@import "~less/theme.less";
+
+.mc-tx-scan-page {
+  display: flex;
+  flex-direction: column;
+
+  .mc-body {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 48px;
+
+    .telegram-title {
+      padding: 16px 0;
+      margin-bottom: 2px;
+      font-size: 24px;
+      font-weight: 500;
+      text-align: center;
+      background-color: @mc-title-bg-color;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+  .mc-body-area {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    flex-grow: 1;
+
+    .mc-editor-wrapper {
+      width: 62%;
+      display: flex;
+      flex-direction: column;
+
+      .mc-ex-editor {
+        width: 100%;
+        flex-grow: 2;
+      }
+      .mc-editor {
+        flex-grow: 2;
+        display: flex;
+        flex-direction: column;
+
+        .mc-editor-head {
+          display: flex;
+          flex-grow: 1;
+          flex-direction: column;
+          .mc-editor__row {
+            flex-grow: 2;
+          }
+        }
+        .mc-editor-body {
+          display: flex;
+          flex-grow: 3;
+          flex-direction: column;
+
+          &:last-child {
+            border-bottom: solid 1px #161826;
+          }
+
+          .mc-editor__row {
+            flex-grow: 1;
+            min-height: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .mc-paging-area {
+    display: flex;
+    flex-grow: 1;
+    margin-top: 16px;
+    align-items: flex-end;
+    background-color: @mc-black-bg-color;
+    padding: 8px 16px 0 8px;
+  }
+
+  .mc-foot-area-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    background-color: @mc-black-bg-color;
+    // max-height: 80px;
+    // padding: 0 24px;
+
+    .mc-foot-area {
+      display: flex;
+      align-items: center;
+      margin-left: 8px;
+
+      .ant-pagination {
+        // flex: 1;
+        margin-left: auto;
+        margin-right: 16px;
+      }
+
+      .ant-btn {
+        margin-right: 16px;
+      }
+    }
+
+    .mc-bottom-btns {
+      // margin-top: auto;
+      margin-left: auto;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+      .ant-btn {
+        margin: 8px;
+      }
+    }
+  }
+
+  .mc-docx-viewer {
+    margin-right: 16px;
+  }
+
+  .mc-divider {
+    width: 2px;
+    height: 48px;
+    margin: 0 8px;
+    background-color: @mc-grey-color;
+  }
+
+  .mc-choice {
+    width: 50%;
+    flex-shrink: 1;
+    margin-right: 12px;
+    padding-top: 222px;
+    background-color: @mc-grey-color;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .ant-btn {
+      margin-bottom: 24px;
+    }
+  }
+
+  .mc-camera {
+    width: 38%;
+    flex-shrink: 1;
+  }
+
+  .mc-docx-viewer {
+    width: 38%;
+    flex-shrink: 1;
+  }
+
+  // .mc-editor-wrapper {
+  //   width: 62%;
+  //   flex-shrink: 0;
+  //   display: flex;
+  //   flex-direction: column;
+
+  //   .mc-editor {
+  //     &__row {
+  //       min-height: 56px;
+  //       max-height: 60px;
+  //       line-height: 42px;
+  //       overflow: hidden;
+  //       border-top: 1px solid #161826;
+
+  //       &:last-child {
+  //         border-bottom: 1px solid #161826;
+  //       }
+  //     }
+  //   }
+  // }
+
+  .mc-editor-body {
+    .mc-editor-input {
+      color: @mc-numbers-color;
+    }
+  }
+  .mc-editor__cell--light {
+    background-color: #32c5ff88;
+  }
+}
+
+.mc-info-card {
+  border-radius: 4px;
+  background-color: #161c35;
+  box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 70px;
+  padding: 8px;
+  position: relative;
+
+  &__warn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    background-color: #e02020;
+    padding: 4px 12px 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__tips {
+    // position: absolute;
+    // width: 260px;
+    color: #32c5ff;
+    font-size: 16px;
+    margin-top: 8px;
+    padding: 4px 12px 8px 12px;
+  }
+}

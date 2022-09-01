@@ -1,0 +1,36 @@
+@import "~less/theme.less";
+
+.mc-telegram-ex-editor {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .editor-body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .editor-body-input {
+      width: 100%;
+      height: 100%;
+      background-color: @mc-dark-color;
+      border: @gui-border-thin;
+      padding: 24px;
+      color: @mc-text-color;
+      font-size: 26px;
+      line-height: 1.5em;
+      font-family: Consolas, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+        Bitstream Vera Sans Mono, Courier New, monospace;
+      resize: none;
+
+      &:hover,
+      &:active,
+      &:focus {
+        border: solid 1px @mc-primary-color;
+      }
+    }
+  }
+}

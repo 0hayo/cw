@@ -1,0 +1,50 @@
+@import "~less/theme.less";
+
+.mc-config-modal {
+  .terminal-register {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .tips {
+    width: 240px;
+    color: @mc-warning-color;
+    font-size: 20px;
+    text-align: left;
+    margin: 24px;
+  }
+  .config-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 20px;
+    min-height: 246px;
+
+    .title-text {
+      text-align: left;
+      margin: 16px 24px;
+    }
+    .tip-text {
+      font-size: 16px;
+      color: @gui-title-color;
+      text-align: left;
+      margin: 16px 24px;
+    }
+
+    .local-service-check {
+      font-size: 18px;
+    }
+
+    .form-line {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
+}
+
+.mc-config-modal-wrapper {
+  margin-top: 32px;
+}

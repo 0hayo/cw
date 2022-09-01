@@ -1,0 +1,71 @@
+.mc-type-picker {
+  display: inline-block;
+
+  &__overlay {
+    padding: 24px;
+    font-size: 24px;
+    border-radius: 8px;
+    background-color: #2e324e;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.6);
+
+    ul {
+      margin: 0;
+      padding: 24px 0;
+      list-style: none;
+    }
+  }
+
+  &__head {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+
+    span {
+      color: #fff;
+      line-height: 48px;
+    }
+  }
+
+  &__item {
+    height: 48px;
+    margin-top: 16px;
+    padding: 0 24px;
+    min-width: 200px;
+    line-height: 48px;
+    border-radius: 4px;
+    background-color: #b7b7b7;
+    cursor: pointer;
+    color: #fff;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &--active {
+      background-color: #32c5ff;
+    }
+
+    &:hover {
+      background-color: #32c5ff;
+    }
+  }
+
+  &__button {
+    color: #0091ff;
+    border: 1px solid #0091ff;
+    background-color: transparent;
+    width: 80px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  .mc-icon {
+    cursor: pointer;
+  }
+}

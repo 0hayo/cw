@@ -1,0 +1,52 @@
+@import "~less/base.less";
+
+.mc-recv-page {
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    // margin-left: -80px;
+  }
+
+  &__image {
+    width: 677px;
+    height: 537px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: -@mc-sidebar-width;
+    background-image: url(../../../images/recv.png);
+  }
+
+  &__board {
+    color: #32c5ff;
+    width: 672px;
+    height: 168px;
+    padding: 16px;
+    margin-top: 56px;
+    border-radius: 4px;
+    margin-left: -@mc-sidebar-width;
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.5);
+
+    &-title {
+      display: flex;
+      font-size: 18px;
+      line-height: 1;
+      align-items: center;
+      padding-bottom: 38px;
+    }
+
+    .ant-btn {
+      margin-right: 16px;
+    }
+  }
+
+  &__panel {
+    top: @mc-header-height + 22px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1;
+    position: fixed;
+  }
+}

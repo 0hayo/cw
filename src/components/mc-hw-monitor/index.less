@@ -1,0 +1,53 @@
+@import "~less/theme.less";
+
+.mc-hw-monitor {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  // height: 64px;
+  width: 120px;
+  margin-right: 8px;
+
+  .cpu-temperature,
+  .device-temperature {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    line-height: 180%;
+
+    .mc-icon {
+      color: @mc-primary-color;
+      font-size: 24px;
+    }
+
+    .temperature-title {
+      color: @mc-primary-color;
+      margin-left: 8px;
+      width: 68px;
+      text-align: justify;
+      text-justify: inter-ideograph;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+    }
+
+    .temperature-value {
+      color: @mc-primary-color;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 700;
+    }
+  }
+  .device-temperature {
+    .mc-icon {
+      color: @mc-green-color;
+      font-size: 24px;
+    }
+
+    .temperature-title,
+    .temperature-value {
+      color: @mc-green-color;
+    }
+  }
+}

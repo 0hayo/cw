@@ -1,0 +1,38 @@
+@import "~less/theme.less";
+
+.mst-window-buttons {
+  margin-top: 10px;
+  margin-right: 20px;
+  height: 12px;
+  display: flex;
+
+  .window-button-disabled {
+    margin: 0px 6px;
+    width: 12px;
+    height: 12px;
+    background: #d0d0d0;
+    border: 0.5px solid #b2b2b2;
+    box-sizing: border-box;
+    cursor: not-allowed;
+  }
+
+  .window-button-minimize {
+    margin: 0px 6px;
+    width: 12px;
+    height: 12px;
+    background: @mc-green-color;
+    border: 0.5px solid #73df9c;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  .window-button-close {
+    margin: 0px 6px;
+    width: 12px;
+    height: 12px;
+    background: #f56c6c;
+    border: 0.5px solid #e24640;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+}

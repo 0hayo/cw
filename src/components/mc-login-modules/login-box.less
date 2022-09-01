@@ -1,0 +1,81 @@
+@import "~less/theme.less";
+
+.mc-login-box {
+  display: flex;
+  flex-direction: column;
+  width: 228px;
+  height: 260px;
+  align-self: flex-end;
+  margin-right: 80px;
+  margin-top: 100px;
+  background: #000000;
+  border: 2px solid #394061;
+  border-radius: 8px;
+
+  &__margn {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    align-items: flex-start;
+
+    .select-local {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 0;
+      .ant-switch-inner {
+        font-size: 15px;
+        font-weight: 500;
+        padding: 0 8px;
+      }
+      .switch-online {
+      }
+      .switch-local {
+        background-color: @mc-warning-color;
+      }
+    }
+  }
+  &__lable {
+    width: 42px;
+    height: 22px;
+    color: #32c5ff;
+    /* Body 14/Medium */
+    font-family: PingFang SC;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 22px;
+  }
+  &__input {
+    width: 180px;
+    height: 32px;
+    color: #32c5ff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-size: 20px;
+    // background-image: url(/images/login_input_ic.png);
+    // background-size: 17px 18px;
+    // background-position: 10px 7px;
+    // background-repeat: no-repeat;
+    // padding-left: 34px;
+  }
+
+  &__img {
+    box-sizing: border-box;
+    background-image: url(../../images/login/login_input_ic.png);
+    background-size: 17px 18px;
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    padding-left: 34px;
+  }
+  &__pswd {
+    box-sizing: border-box;
+    background-image: url(../../images/login/login_pswd_ic.png);
+    background-size: 17px 18px;
+    background-position: 10px 7px;
+    background-repeat: no-repeat;
+    padding-left: 34px;
+  }
+}

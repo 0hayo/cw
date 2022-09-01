@@ -1,0 +1,46 @@
+@import "~less/theme.less";
+
+.mc-message {
+  border: solid 1px @mc-primary-color;
+  border-radius: 12px;
+  background-color: @mc-grey-color;
+  color: @mc-title-color;
+  margin-bottom: -16px;
+  margin-left: -16px;
+
+  .ant-notification-notice-icon {
+    font-size: 24px;
+  }
+
+  .ant-notification-notice-message {
+    color: @mc-text-color;
+    font-size: 20px;
+  }
+  .ant-notification-notice-description {
+    margin-top: 16px;
+    font-size: 18px;
+    color: @mc-text-color;
+  }
+
+  .ant-notification-notice-close {
+    color: @mc-warning-color;
+    margin-top: -8px;
+    margin-right: -12px;
+  }
+
+  .ant-notification-close-icon {
+    font-size: 20px;
+  }
+}
+
+.mc-message-success {
+  border: solid 1px @mc-green-color;
+}
+
+.mc-message-failure {
+  border: solid 1px @mc-danger-color;
+}
+
+.mc-message-warning {
+  border: solid 1px @mc-warning-color;
+}

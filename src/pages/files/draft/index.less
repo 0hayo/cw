@@ -1,0 +1,252 @@
+@import "~less/theme.less";
+
+.mc-draft-page {
+  .mc-body {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: stretch;
+  }
+
+  .main-panel {
+    width: 100%;
+    height: 100%;
+
+    .mst-panel__head {
+      justify-content: center;
+    }
+
+    .mst-panel__body {
+      padding: 0;
+    }
+  }
+
+  .mc-body-area {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .mc-list-area-wrapper {
+    flex: 1;
+    margin: 16px;
+    height: 0;
+    overflow: auto;
+
+    .mc-list-area {
+      flex: 1;
+      display: flex;
+      overflow: auto;
+      flex-wrap: wrap;
+      align-content: flex-start;
+    }
+  }
+
+  .mc-file-card {
+    padding: 8px;
+    margin: 12px;
+    width: 240px;
+    height: 160px;
+    line-height: 18px;
+    border-radius: 4px;
+    // background: @mc-grey-color;
+    // box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    // background-size: 240px 148px;
+    // background-position: 0px 0px;
+    // background-image: url("../../../images/file-card-grey.png");
+    // background-repeat: no-repeat;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+
+    &__title {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 14px;
+      width: 148px;
+      background-color: @mc-grey-color;
+      border-radius: 18px 18px 0 0;
+      padding: 4px 16px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      cursor: pointer;
+
+      .file-type {
+        border: solid 2px @mc-primary-color;
+        border-radius: 16px;
+        padding: 1px 8px;
+        font-weight: 700;
+
+        &-ex {
+          border: solid 2px @mc-warning-color;
+        }
+      }
+
+      .title-icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-left: auto;
+        .delete {
+          // right: 5px;
+          // bottom: 5px;
+          // position: absolute;
+          &:hover {
+            color: @mc-danger-color;
+          }
+        }
+
+        .check {
+          // right: 48px;
+          // bottom: 12px;
+          // position: absolute;
+
+          .ant-checkbox-inner {
+            border: 2px #29a9ff solid;
+            // border-radius: 15px;
+            // background-color: rgba(255, 255, 255, 0.1);
+          }
+        }
+      }
+    }
+
+    &__content {
+      width: 100%;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border: solid 2px @mc-grey-color;
+      border-radius: 0 8px 8px 8px;
+      padding: 16px;
+      position: relative;
+    }
+
+    &__checked {
+      .mc-file-card__title {
+        background-color: @mc-green-color;
+        border-radius: 18px 18px 0 0;
+      }
+      .mc-file-card__content {
+        border: solid 2px @mc-green-color;
+      }
+    }
+
+    &__ext {
+      width: 60px;
+      height: 80px;
+      font-size: 22px;
+      padding-top: 40px;
+      padding-left: 8px;
+      color: #fff;
+    }
+
+    &__name {
+      flex: 1;
+      color: @mc-primary-color;
+      // margin-top: 25px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    &__time {
+      color: #32c5ff;
+      font-size: 16px;
+    }
+
+    &__mask {
+      top: 4px;
+      right: 4px;
+      bottom: 4px;
+      opacity: 0;
+      display: flex;
+      flex-direction: column;
+      grid-template-rows: 25% 25% 25%;
+      position: absolute;
+      align-items: center;
+      justify-content: center;
+      // background-color: rgba(46, 50, 78, 0.9);
+      // padding-top: 24px;
+      background-color: @mc-grey-color;
+      border-radius: 8px;
+
+      .mc-button {
+        font-size: 12px;
+        color: @mc-numbers-color;
+      }
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__extra {
+      flex: 1;
+      height: 80px;
+      padding: 5px 0;
+      font-size: 12px;
+      margin-left: 14px;
+      border-radius: 2px;
+      background-color: @mc-dark-color;
+      color: rgba(255, 255, 255, 0.5);
+      text-align: center;
+    }
+  }
+
+  .mc-file-filter {
+    // margin-left: 24px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    background: @mc-dark-color;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    align-items: center;
+    position: relative;
+    display: flex;
+  }
+
+  .mc-file-search {
+    right: 125px;
+    font-size: 18px;
+    position: absolute;
+  }
+
+  .mc-file-input {
+    outline: 0;
+    width: 240px;
+    // height: 32px;
+    // padding-left: 8px;
+    // border-radius: 0px;
+    // border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: @mc-modal-bg-color;
+    .ant-input-group-addon,
+    .ant-input-affix-wrapper {
+      background-color: transparent;
+      border: @gui-border-thin;
+
+      &:hover,
+      &:active {
+        border: @gui-border-thin;
+      }
+    }
+    .ant-input-affix-wrapper {
+      border-right: none;
+    }
+    .ant-input-group-addon {
+      color: @mc-text-color;
+    }
+  }
+
+  .mc-file-label {
+    width: 70px;
+    margin-left: 40px;
+  }
+}

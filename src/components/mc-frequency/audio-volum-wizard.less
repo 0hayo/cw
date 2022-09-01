@@ -1,0 +1,81 @@
+@import "~less/theme.less";
+
+.wizard-main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  .wizard-tip {
+    font-size: 24px;
+    margin: 8px 16px;
+  }
+
+  .wizard-tip-2 {
+    color: @mc-green-color;
+  }
+
+  .wizard-freq-wrapper {
+    position: relative;
+    background-color: @mc-black-bg-color;
+    width: 100%;
+    margin: 24px 0;
+    border-radius: 16px;
+
+    .wizard-freq-view {
+      height: 180px;
+      width: 100%;
+    }
+
+    .guideline {
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      border-top: dashed 1px;
+      // border-left-style: none;
+
+      &-max-top {
+        border-color: @mc-danger-color;
+        top: 30%;
+      }
+      &-max-bottom {
+        border-color: @mc-danger-color;
+        bottom: 30%;
+      }
+
+      &-min-top {
+        border-color: @mc-green-color;
+        top: 45%;
+      }
+      &-min-bottom {
+        border-color: @mc-green-color;
+        bottom: 45%;
+      }
+    }
+  }
+
+  .wizard-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    .volume-display {
+      font-size: 24px;
+      .ant-input-number {
+        margin-left: 24px;
+        font-size: 24px;
+      }
+    }
+
+    .volume-control {
+      width: 95%;
+      margin-bottom: 24px;
+    }
+
+    .ant-slider-mark-text {
+      color: @mc-primary-color;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@import "~less/theme.less";
+
+.mc-speed-board {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  &-circle {
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid 5px @mc-primary-color;
+    border-radius: 32px;
+  }
+  &-value {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    font-weight: 700;
+  }
+  &-title {
+    margin-top: 8px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.mc-speed-bubble {
+  width: 400px;
+  .ant-tooltip-inner {
+    width: 400px;
+    padding: 16px 16px 24px 16px;
+  }
+  .mc-speed {
+    width: 360px;
+  }
+}

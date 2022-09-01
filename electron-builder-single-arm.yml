@@ -1,0 +1,29 @@
+appId: cw-terminal
+artifactName: cw-terminal-${version}-arm64.${ext}
+compression: store
+productName: CW-TERMINAL
+asar: false
+directories:
+  output: dist
+linux:
+  target:
+    - {target: deb, arch: arm64}
+  icon: "./build/icons/"
+  executableName: cw-terminal
+  category: Utility
+  description: 智能收发报系统
+  vendor: DEV-TEAM
+  desktop:
+    Name: CW-TERMINAL
+    Name[zh_CN]: 智能收发报系统
+    Comment: CW Auto Operation System
+    Comment[zh_CN]: 智能收发报系统
+    Terminal: false
+    Type: Application
+win:
+  target: nsis
+  icon: "./build/icons/"
+files:
+  - "./build/"
+  - "./lib/"
+  - "./package.json"

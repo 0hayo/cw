@@ -1,0 +1,65 @@
+@import "~less/theme.less";
+
+.mc_telegram_preview {
+  text-align: center;
+
+  .preview-box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .preview-funcs {
+      position: absolute;
+      bottom: 0px;
+      height: 48px;
+      // width: 160px;
+      background-color: #3d9bc7b6;
+      border-radius: 8px 8px 0 0;
+      text-align: center;
+      padding: 10px;
+
+      .anticon {
+        color: @mc-text-color;
+        font-size: 28px;
+        cursor: pointer;
+        margin: 0 16px;
+      }
+    }
+
+    #preview-content {
+      background-color: rgb(238, 232, 148);
+      color: black;
+      font-size: 16px;
+      padding: 48px 32px;
+      cursor: text;
+      max-width: 768px;
+      min-width: 512px;
+      min-height: 640px;
+      user-select: text;
+      pre {
+        text-align: left;
+        white-space: pre-wrap;
+        max-height: 480px;
+      }
+
+      .preview-title {
+        font-weight: 700;
+        font-size: 22px;
+        margin-bottom: 24px;
+        text-align: center;
+      }
+      .preview-subtitle {
+        text-align: right;
+        font-size: 14px;
+      }
+    }
+  }
+}
+// .mc_telegram_preview_wrap {
+//   width: 600px;
+//   height: 800px;
+//   left: 15%;
+//   top: 100px;
+//   position: absolute;
+// }

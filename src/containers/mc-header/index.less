@@ -1,0 +1,221 @@
+@import "~less/theme.less";
+
+.mc-header {
+  box-shadow: inset 0px -1px 0px #000000;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  height: 100%;
+  padding: 0 20px;
+  position: relative;
+  // -webkit-app-region: drag;
+  // -webkit-region-fragment:break;
+
+  .btn-back {
+    width: 92px;
+    border: 0;
+    color: rgba(255, 255, 255, 0.7);
+    background-size: cover;
+    background-color: transparent;
+    background-image: url(../../images/return.png);
+  }
+
+  &__devices {
+    // width: 30%;
+  }
+
+  &__title {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 342px;
+      height: 62px;
+    }
+  }
+
+  &__left {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .go-home {
+      margin-left: 32px;
+      background-color: transparent;
+      border: solid 1px;
+      color: #fff8e0;
+      cursor: pointer;
+
+      &:hover {
+        color: @mc-primary-color;
+      }
+    }
+  }
+
+  &__logo {
+    font-size: 24px;
+    color: @mc-title-color;
+    letter-spacing: 4px;
+    -webkit-app-region: drag;
+  }
+
+  &__right {
+    width: 30%;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+  }
+
+  &__right_detail {
+    height: 48px;
+    display: flex;
+    // align-items: baseline;
+    margin-right: 24px;
+  }
+
+  &__right_detail_img {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+    display: flex;
+  }
+
+  &__right_detail_img img {
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+  }
+
+  &__right_detail_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 16px;
+  }
+
+  &__right_detail_name {
+    color: @gui-title-color;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 24px;
+  }
+
+  &__right_detail_code {
+    font-size: 14px;
+    color: @gui-text-color;
+    line-height: 18px;
+    padding: 4px 0 0 0;
+  }
+
+  &__iconBox {
+    -webkit-app-region: no-drag;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    background: #2e324e;
+    box-shadow: 2px 2px 8px 0px #080c1e, -2px -2px 8px 0px #4e5c95;
+
+    &:hover {
+      cursor: pointer;
+
+      .mc-header__icon {
+        color: #fff8e0;
+      }
+    }
+
+    &:active {
+      box-shadow: inset 2px 2px 4px 0px #080c1e, inset -2px -2px 4px 0px #4e5c95;
+
+      .mc-header__icon {
+        color: #24e059;
+      }
+    }
+  }
+
+  &__icon {
+    color: rgba(250, 235, 215, 0.349);
+    font-size: 24px;
+  }
+
+  &__leading {
+    margin-left: 16px;
+  }
+
+  &__tailing {
+    margin-right: 16px;
+  }
+}
+
+.ant-layout-header {
+  height: 80px;
+}
+
+.header_bgc {
+  // height: 100%;
+  display: flex;
+  align-items: center;
+  .header_dev {
+    display: flex;
+    height: 60px;
+    border-radius: 8px;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: space-between;
+    background: @gui-background-color;
+    .header_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-right: 10px;
+      text-align: center;
+      .header_list_time {
+        color: @gui-title-color;
+        font-size: 32px;
+        line-height: 30px;
+      }
+      .header_list_date {
+        font-size: 14px;
+        color: @gui-text-color;
+        line-height: 20px;
+      }
+      // img {
+      //   width: 84px;
+      //   height: 32px;
+      // }
+    }
+    .header_list:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.register-process {
+  display: flex;
+  flex-direction: column;
+
+  .register-tips {
+    margin: 16px 0;
+  }
+  .register-btns {
+    text-align: right;
+    .ant-btn {
+      margin-left: 16px;
+    }
+  }
+}

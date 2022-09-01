@@ -1,0 +1,388 @@
+@import "~less/base.less";
+
+.mc-workbench-7 {
+  height: 100%;
+  &__body {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    // justify-content: center;
+    // margin-left: -80px;
+    .processing_ready {
+      background: @gui-base-color;
+      border-radius: 8px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      padding-bottom: 24px;
+      flex: 2 0;
+
+      .telegram-list {
+        overflow: hidden;
+      }
+
+      .ready_top {
+        width: 100%;
+        height: 98px;
+        box-sizing: border-box;
+        padding: 20px;
+        background: @gui-active-color;
+
+        .ready_top_name {
+          font-size: 24px;
+        }
+
+        .ready_top_text {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  &__main {
+    flex-grow: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: flex-end;
+    margin-left: 24px;
+    height: 100%;
+    padding-right: 48px;
+  }
+
+  &__image {
+    width: 90%;
+    height: 119px;
+    margin-top: 156px;
+    flex-shrink: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(../../images/slogan.png);
+  }
+
+  &__radio-info {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    .radio-info {
+      margin: 8px 0;
+      min-width: 200px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .anticon,
+      .mc-icon {
+        margin-right: 8px;
+      }
+
+      .anticon-edit {
+        display: none;
+        color: @mc-primary-color;
+        margin-left: auto;
+        cursor: pointer;
+      }
+
+      &:hover {
+        .anticon-edit {
+          display: block;
+        }
+      }
+
+      .mc_common_select {
+        width: 180px;
+        margin: 0 8px;
+      }
+
+      input {
+        width: 180px;
+        margin: 0 8px;
+      }
+    }
+  }
+
+  &__divider {
+    width: 100%;
+    height: 4px;
+    left: 0px;
+    top: 129px;
+    background: linear-gradient(180deg, #a8aed9 0%, #505788 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 8px;
+  }
+
+  &__board {
+    color: #32c5ff;
+    width: 700px;
+    margin-top: auto;
+    margin-bottom: 204px;
+    margin-right: 20px;
+    box-shadow: inset 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    background-color: @mc-grey-color;
+    border: 1px solid #000000;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      padding: 16px;
+
+      .start-work-btn {
+        font-size: 20px;
+        height: 40px;
+        width: 140px;
+        border-radius: 4px;
+        margin-top: auto;
+        line-height: 1.2;
+        align-self: center;
+      }
+    }
+
+    &-title {
+      display: flex;
+      font-size: 18px;
+      line-height: 1;
+      align-items: center;
+      padding-bottom: 38px;
+    }
+
+    &__right {
+      margin-left: auto;
+      width: 182px;
+      .mst-panel__head {
+        border-radius: 0 4px 0 0;
+        height: 48px;
+        .mst-panel__title {
+          text-align: center;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 0.8;
+          color: @gui-title-color;
+        }
+      }
+      .mst-panel__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .ant-btn {
+          width: 80%;
+          border-radius: 4px;
+          margin: 4px 0;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+
+  &__panel {
+    top: @mc-header-height + 22px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 1;
+    height: 100%;
+    margin-left: auto;
+    // flex-grow: 2;
+    // position: fixed;
+  }
+}
+.terminal_action_btn_recv {
+  margin-top: 10px;
+  background-color: #13c2c2;
+}
+.workbench_right_ul {
+  width: 900px;
+  height: 100%;
+  margin-left: auto;
+  .task {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: @gui-base-color;
+    border-radius: 4px;
+    border: 2px solid #4c537d;
+
+    .task_top {
+      width: 100%;
+      height: 98px;
+      box-sizing: border-box;
+      padding-top: 20px;
+      padding-left: 20px;
+      border-bottom: 1px solid #000;
+      background: @gui-active-color;
+      .task_top_title {
+        color: #fff;
+        font-size: 24px;
+      }
+      .task_btm_flex {
+        margin-top: 10px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        border-radius: 4px;
+        .task_btm_switch {
+          width: 180px;
+          height: 100%;
+          display: flex;
+          .switch_text {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: @gui-text-color;
+            background: @gui-background-color;
+            cursor: pointer;
+          }
+          .active {
+            color: #fff;
+            background: @gui-a-color;
+          }
+        }
+      }
+      .task_radio {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+      }
+    }
+    .task_ul {
+      width: 100%;
+      overflow: auto;
+      flex: 1;
+      .task_list_hover {
+        box-sizing: border-box;
+        padding: 0 20px;
+        height: 80px;
+        .task_list {
+          width: 100%;
+          display: flex;
+          height: 100%;
+          border-bottom: 1px solid #000;
+          padding: 10px 0;
+          box-sizing: border-box;
+
+          .task_list_left {
+            width: 220px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .task_list_left_name {
+              font-size: 20px;
+            }
+          }
+          .task_list_left::after {
+            content: "";
+            width: 1px;
+            height: 100%;
+            background: #000;
+            position: absolute;
+            right: 0;
+            top: 0;
+            bottom: 0;
+          }
+          .task_list_detail {
+            display: flex;
+            align-items: center;
+            .task_list_type {
+              width: 68px;
+              text-align: center;
+              color: #fff;
+              position: relative;
+            }
+            .task_list_type::after {
+              content: "";
+              position: absolute;
+              background: #000;
+              width: 1px;
+              height: 100%;
+              right: 0;
+              top: 0;
+            }
+            .task_list_detail_body {
+              flex: 1;
+              color: #fff;
+              font-size: 16px;
+              box-sizing: border-box;
+              padding-top: 6px;
+              padding-left: 20px;
+            }
+          }
+          .task_list_right {
+            display: none;
+          }
+        }
+      }
+      .task_list_hover:hover {
+        background: @gui-active-color;
+
+        .task_list_detail {
+          display: none;
+        }
+        .task_list_right {
+          flex: 1;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 20px;
+          box-sizing: border-box;
+          .task_list_right_icon {
+            font-size: 18px;
+          }
+          .task_list_right_text {
+            color: @gui-title-color;
+          }
+        }
+      }
+    }
+  }
+
+  .workbench-task-list {
+    border: @gui-border;
+
+    .task_btns {
+      //display: none;
+    }
+
+    .task_list {
+      .task_right {
+        display: none;
+      }
+
+      &:hover {
+        .task_right {
+          display: flex;
+        }
+        .task_list_content {
+          display: none;
+        }
+      }
+    }
+    .task_telegram_wrapper {
+      .task_telegrams {
+        .task_telegram_name {
+          max-width: 120px;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
+
+.ant-select-item-option-disabled {
+  color: @mc-dark-color;
+}

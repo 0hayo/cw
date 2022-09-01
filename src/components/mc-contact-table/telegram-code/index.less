@@ -1,0 +1,63 @@
+@import "~less/theme.less";
+@import "../common.less";
+
+.home-telegram-code {
+  // flex-grow: 2;
+  // flex-shrink: 0;
+  // max-width: 720px;
+  margin-right: 16px;
+  .with-hover {
+    &:hover {
+      .content-col {
+        background-color: @mc-title-bg-color;
+      }
+    }
+  }
+
+  .active {
+    .content-col {
+      background-color: @mc-title-bg-color;
+      color: @mc-warning-color;
+    }
+  }
+
+  .mst-panel__body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .telegram-code-list {
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .primary-setting-col {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+    align-items: center;
+    font-size: 14px;
+    overflow: hidden;
+    white-space: nowrap;
+
+    .select-primary-flag {
+      width: 70px;
+    }
+    .belong-seq-title {
+      font-size: 16px;
+      margin: 0 4px;
+    }
+    .belong-seq-input {
+      width: 70px;
+      font-size: 14px;
+    }
+    .ant-checkbox-input {
+      width: 24px;
+      margin-left: 8px;
+    }
+    .ant-checkbox-wrapper {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

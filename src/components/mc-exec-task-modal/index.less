@@ -1,0 +1,206 @@
+@import "~less/theme.less";
+
+.mc_task_exec_modal {
+  color: #fff;
+  .ant-modal-content {
+    width: 100%;
+    // background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    background: @mc-modal-bg-color;
+    backdrop-filter: blur(10px);
+    box-shadow: @mc-box-shadow;
+
+    .ant-modal-body {
+      border-radius: 10px;
+      padding: 0;
+    }
+
+    .modal_head {
+      width: 100%;
+      box-sizing: border-box;
+      display: flex;
+      height: 56px;
+      align-items: center;
+      padding: 0 20px;
+      color: @gui-title-color;
+      font-size: 24px;
+      border-bottom: 1px solid #000;
+
+      .head_icon {
+        margin-right: 10px;
+      }
+    }
+
+    .modal_content {
+      box-sizing: border-box;
+      padding: 0 20px 20px;
+
+      .modal_list {
+        margin-top: 20px;
+
+        .modal_list_name {
+          color: #fff;
+          font-size: 14px;
+          margin-right: 10px;
+        }
+
+        .modal_list_input {
+          width: 238px;
+          height: 36px;
+          background: @gui-base-color;
+          border: none;
+          padding-left: 10px;
+          box-sizing: border-box;
+          border: 1px solid rgba(255, 255, 255, 0.5) !important;
+          border-radius: 4px;
+          color: @gui-title-color;
+          font-size: 16px;
+        }
+
+        .modal_list_time {
+          width: 238px;
+          height: 36px;
+          background: @gui-base-color;
+          border: none;
+          padding-left: 10px;
+          box-sizing: border-box;
+          border: 1px solid rgba(255, 255, 255, 0.5) !important;
+          border-radius: 4px;
+        }
+        .mc_devices_dropdown {
+          width: 238px;
+        }
+        .ant-picker-input > input {
+          font-size: 14px !important;
+        }
+
+        .modal_list_select {
+          height: 36px;
+        }
+
+        .modal_device_list {
+          border: @gui-border-thin;
+          border-radius: 8px;
+          background-color: @mc-black-bg-color;
+
+          .device-card {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            border: @gui-border-thin;
+            border-radius: 8px;
+            padding: 4px 8px;
+            margin: 8px;
+            background-color: @mc-dark-color;
+            cursor: pointer;
+
+            &:hover {
+              background-color: @mc-title-bg-color;
+            }
+
+            &-active {
+              background-color: @mc-title-bg-color;
+              border: solid 2px @mc-green-color;
+            }
+
+            .ant-checkbox-wrapper {
+              margin-top: 4px;
+              margin-right: 8px;
+            }
+
+            .device-name {
+              padding: 0 16px;
+              width: 200px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
+            .device-contact-name {
+              padding: 0 8px;
+              color: @mc-green-color;
+              width: 160px;
+              flex-grow: 0;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              text-align: left;
+            }
+            .device-status {
+              padding: 0 8px;
+              margin: 0 16px;
+              width: 36px;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+            }
+          }
+        }
+
+        .task_telegram_wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          color: @mc-text-color;
+          margin-left: 32px;
+          margin-bottom: 16px;
+          .task_telegram_title {
+            font-size: 16px;
+            margin-right: 8px;
+          }
+          .task_telegrams {
+            margin-right: 16px;
+
+            .task_telegram_name {
+              margin: 4px 0;
+              white-space: nowrap;
+              text-overflow: ellipsis;
+              cursor: pointer;
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              .task_telegram_link {
+                max-width: 320px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: 20px;
+              }
+              .task_telegram_btn {
+                color: @mc-danger-color;
+                margin-left: auto;
+                padding-left: 8px;
+              }
+              &:hover {
+                .task_telegram_link {
+                  color: @mc-green-color;
+                  text-decoration: underline;
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .modal_footer {
+      width: 100%;
+      border-top: 1px solid #000;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      box-sizing: border-box;
+      padding: 0 20px;
+
+      .modal_Btn {
+        margin-right: 20px;
+      }
+      .modal_Btn_blue {
+        margin-right: 20px;
+        background-color: #08979c;
+      }
+    }
+  }
+}

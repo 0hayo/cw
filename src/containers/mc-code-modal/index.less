@@ -1,0 +1,111 @@
+@import "~less/theme.less";
+
+.mc-code-modal {
+  overflow: hidden;
+  max-width: 1600px;
+
+  .ant-modal-body {
+    height: 900px;
+  }
+
+  &__graph {
+    height: 240px;
+    margin-bottom: 24px;
+  }
+
+  &__table {
+    font-size: 24px;
+    margin-top: 40px;
+    line-height: 48px;
+    color: #fff;
+    text-align: center;
+  }
+
+  &__prev {
+    outline: 0;
+    padding: 0;
+    width: 32px;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 50px;
+    border: 1px solid #161826;
+    border-radius: 5px 0 0 5px;
+    background-color: #32c5ff;
+    border-right: 0;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__next {
+    outline: 0;
+    padding: 0;
+    width: 32px;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 50px;
+    border: 1px solid #161826;
+    border-radius: 0 5px 5px 0;
+    background-color: #32c5ff;
+    border-left: 0;
+
+    &:active {
+      opacity: 0.8;
+    }
+  }
+
+  &__cell {
+    outline: 0;
+    width: 150px;
+    border: 1px solid #161826;
+    background-color: #505788;
+    text-align: center;
+    text-transform: uppercase;
+
+    & + & {
+      border-left: 0;
+    }
+  }
+
+  &__cell--micro {
+    height: 32px;
+    font-size: 16px;
+    line-height: 32px;
+    color: @mc-grey-color;
+  }
+
+  &__cell--focus {
+    color: #fff;
+    background-color: #32c5ff;
+  }
+
+  &__cell--hover:hover {
+    background-color: #32c5ff;
+  }
+
+  &__grab {
+    border: 0;
+    outline: 0;
+    width: 314px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #32c5ff;
+    border-radius: 4px;
+    text-transform: uppercase;
+    background-color: @mc-dark-color;
+    box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .ant-btn + .ant-btn {
+    margin-left: 24px;
+  }
+
+  .ant-checkbox-wrapper {
+    top: 12px;
+    right: -120px;
+    position: absolute;
+  }
+}

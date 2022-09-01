@@ -1,0 +1,33 @@
+@import "~less/base.less";
+
+.mc-login-modal {
+  .ant-modal-body {
+    padding: 0;
+    .mc-login-box {
+      width: 100%;
+      margin-top: 0;
+      // padding: 32px 16px;
+      align-items: center;
+    }
+    .mc_margn {
+      margin-top: 8px;
+    }
+    .mc_margn_lage {
+      margin-top: 24px;
+      width: 180px;
+      height: 32px;
+      background: linear-gradient(180deg, #a8aed9 0%, #505788 100%);
+      border-radius: 4px;
+      text-decoration: none;
+      outline-style: none;
+      font-size: 20px;
+      color: @mc-text-color;
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        box-shadow: inset 2px 2px 4px 0px #080c1e, inset -2px -2px 4px 0px #4e5c95;
+      }
+    }
+  }
+}

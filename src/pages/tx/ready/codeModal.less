@@ -1,0 +1,149 @@
+@import "~less/theme.less";
+
+.mc_contact_modal_tx_new {
+  .contact_modal_content {
+    font-weight: 700;
+    box-sizing: border-box;
+    width: 95%;
+
+    .modal_list_inline {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      // padding-left: 16px;
+      // border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 6px;
+      width: 100%;
+      height: 60px;
+      // margin-right: 10px;
+      margin-bottom: 10px;
+      // background-color: rgb(38, 44, 68);
+      .modal_list_name {
+        font-size: 20px;
+        margin-right: 16px;
+      }
+      .modal_list_select {
+        .ant-select {
+          width: 120px;
+          margin-right: 8px;
+          .ant-select-selection-item {
+            color: @mc-primary-color;
+            font-size: 18px;
+          }
+        }
+        .input {
+          width: 120px;
+        }
+      }
+    }
+
+    .contact_info {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-around;
+
+      .modal_list_wrapper {
+        display: flex;
+        flex-direction: column;
+        width: inherit;
+        border: @gui-border-thin;
+        border-radius: 10px;
+        margin-bottom: 16px;
+
+        .modal_list_title {
+          width: 100%;
+          height: 36px;
+          font-size: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: @mc-title-bg-color;
+          border-radius: 12px 12px 0 0;
+        }
+
+        .modal_list_inputs {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          justify-content: space-evenly;
+          padding-bottom: 16px;
+        }
+
+        .modal_list {
+          margin-top: 8px;
+          .modal_list_name {
+            color: #fff;
+            font-size: 18px;
+            width: 100%;
+            text-align: center;
+          }
+          .modal_list_input {
+            // width: 238px;
+            height: 36px;
+            background: @gui-base-color;
+            border: none;
+            padding-left: 10px;
+            box-sizing: border-box;
+            border: 1px solid rgba(255, 255, 255, 0.5) !important;
+            border-radius: 4px;
+            color: @gui-title-color;
+            font-size: 16px;
+          }
+        }
+      }
+
+      .center_divider {
+        display: flex;
+        margin: 8px;
+        font-size: 32px;
+        color: @mc-primary-color;
+        align-items: center;
+      }
+    }
+
+    .station-info {
+      width: 100%;
+
+      margin-bottom: 16px;
+      .mst-panel,
+      .home-telegram-code {
+        box-shadow: none !important;
+        max-height: 320px;
+        min-height: 320px;
+        width: 100%;
+      }
+    }
+
+    .timing, .tb {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      height: 40px;
+      .timing_label, .tb_label {
+        font-size: 20px;
+        margin-right: 16px;
+      }
+      .ant-switch-checked {
+        background: #68e9de;
+      }
+      .ant-picker {
+        width: 220px;
+        margin-left: 20px;
+      }
+    }
+  }
+
+  .modal_input {
+    width: 96px;
+    height: 32px;
+    background: @gui-base-color;
+    border: none;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 4px;
+    color: @gui-title-color;
+    font-size: 16px;
+  }
+}

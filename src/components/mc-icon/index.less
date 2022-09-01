@@ -1,0 +1,30 @@
+.mc-icon {
+  line-height: 0;
+  font-size: inherit;
+  text-align: center;
+  vertical-align: -0.15em;
+
+  &--spin {
+    animation: spin 1s infinite linear;
+  }
+
+  &__svg {
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+
+  @keyframes spin {
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+.ant-btn > span + .mc-icon {
+  margin-left: 8px;
+}
+
+.ant-btn > .mc-icon + span {
+  margin-left: 8px;
+}

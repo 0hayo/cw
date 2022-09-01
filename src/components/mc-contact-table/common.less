@@ -1,0 +1,163 @@
+.contact-table-setting-subtitle {
+  color: @mc-text-color;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .anticon {
+    margin-left: auto;
+    font-size: 20px;
+    color: @mc-green-color;
+  }
+  .add-button {
+    margin-left: 16px;
+  }
+
+  .edit-btns {
+    border: @gui-border;
+    border-radius: 4px;
+    background-color: @gui-base-color;
+    padding: 4px 16px;
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+
+    .edit-btn {
+      // margin: 0 4px;
+      cursor: pointer;
+    }
+  }
+}
+
+.contact_table_row_0 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px 0;
+  padding: 0 16px;
+  flex-grow: 0;
+  margin-left: 16px;
+  .ant-checkbox-wrapper,
+  .ant-checkbox-wrapper-checked {
+    font-size: 18px;
+    text-decoration: underline;
+    color: @mc-warning-color;
+    .ant-checkbox-checked span {
+      color: @mc-warning-color;
+    }
+  }
+  .mc-button {
+    margin-right: 24px;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: underline;
+    .anticon {
+      margin: 0;
+    }
+  }
+}
+.contact_table_row_1 {
+  display: flex;
+  flex-direction: row;
+  margin: 8px 0;
+  flex-grow: 1;
+  // justify-content: space-between;
+
+  .home-telegram-code {
+    flex-grow: 4;
+  }
+  .home-telegram-grade {
+    flex-grow: 3;
+  }
+}
+.contact_table_row_2 {
+  display: flex;
+  flex-direction: row;
+  // justify-content: stretch;
+  // align-items: stretch;
+  margin: 8px 0;
+  flex-grow: 3;
+  // flex-shrink: 1;
+  width: 100%;
+
+  .home-telegram-iec {
+    flex-grow: 4;
+  }
+  .home-mask-code {
+    flex-grow: 3;
+  }
+}
+
+.content-list {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: solid 1px @mc-dark-color;
+  // border-radius: 8px;
+  background-color: @mc-grey-color;
+  // padding: 1px;
+  // box-shadow: @mc-box-shadow;
+  min-height: 24px;
+  div {
+    border-spacing: 3px;
+    background-color: @mc-dark-color;
+  }
+}
+.header-row {
+  .header-col {
+    background-color: @mc-title-bg-color;
+    box-shadow: inset 1px 1px 1px @mc-grey-color;
+    padding: 4px 0;
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    // border-spacing: 1px;
+  }
+}
+.content-row {
+  flex-grow: 1;
+  align-items: stretch;
+  min-height: 30px;
+  line-height: 24px;
+
+  .content-col {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: inset 1px 1px 1px @mc-grey-color;
+    padding: 8px 2px;
+    color: @mc-numbers-color;
+    font-size: 20px;
+    font-weight: 500;
+    // font-family: Arial, Helvetica, sans-serif, FangSong_GB2312;
+    // background-color: @mc-grey-color;
+  }
+  .edit-btns-col {
+    // background-color: @gui-base-color;
+    box-shadow: inset 1px 1px 1px @mc-grey-color;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 500;
+    .edit-btn {
+      // margin-left: 8px;
+      cursor: pointer;
+      .anticon {
+        margin-right: 16px;
+      }
+      .anticon-close-circle {
+        color: @mc-danger-color;
+      }
+    }
+  }
+  .ant-input {
+    background-color: @mc-black-bg-color;
+    padding-right: 0;
+    max-height: 32px;
+  }
+}

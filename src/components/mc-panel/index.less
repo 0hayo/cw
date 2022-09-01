@@ -1,0 +1,52 @@
+@import "~less/theme.less";
+
+.mc-panel {
+  display: flex;
+  flex-direction: column;
+  border-radius: 4px;
+  background-color: @mc-modal-bg-color;
+  box-shadow: @mc-box-shadow;
+
+  &__head {
+    line-height: 1;
+    font-size: 24px;
+    position: relative;
+    border-radius: 4px 4px 0 0;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 16px 16px 16px 62px;
+    background-color: @mc-modal-bg-color;
+    background-size: 26px 24px;
+    background-repeat: no-repeat;
+    background-position: 16px 50%;
+    // background-image: url(../../images/radio3.png);
+    height: 56px;
+  }
+
+  &__body {
+    flex: 1;
+    padding: 16px;
+    overflow: auto;
+    position: relative;
+  }
+
+  &__close {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 0;
+    outline: 0;
+    padding: 0;
+    width: 56px;
+    height: 56px;
+    line-height: 56px;
+    cursor: pointer;
+    position: absolute;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.45);
+    background-color: transparent;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.7);
+    }
+  }
+}

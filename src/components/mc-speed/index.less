@@ -1,0 +1,39 @@
+@import "~less/theme.less";
+
+.mc-speed {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+
+  .ant-slider {
+    // width: 240px;
+    // width: 80%
+    flex-grow: 1;
+    margin: 0 6px;
+    // padding: 0 16px;
+
+    .ant-slider-handle {
+      background-color: @mc-warning-color;
+      border-color: @mc-warning-color;
+    }
+
+    .ant-slider-step {
+      background-color: @mc-green-color;
+    }
+
+    .ant-slider-mark-text {
+      color: @mc-text-color;
+    }
+    .ant-slider-rail {
+      margin: 0 5px;
+      background-color: @mc-green-color;
+    }
+    .ant-slider-dot {
+      width: 12px;
+      height: 12px;
+      top: -4px;
+    }
+  }
+}

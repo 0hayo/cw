@@ -1,0 +1,49 @@
+{
+  "name":"无线电信号",
+  "default": true,
+  "types": ["EX"],
+  "line": { "color": "#000000", "width": 1 },
+  "cell_height": 27,
+  "font_size": 22,
+  "head":[
+    [
+      { "type":"label", "label":"来自",    "colspan":1 , "rowspan":1 },
+      { "type":"label", "label":"号数",    "colspan":3 , "rowspan":1 },
+      { "type":"label", "label":"时间",    "colspan":3 , "rowspan":1 },
+      { "type":"label", "label":"记时/签名", "colspan":3 , "rowspan":1 }
+    ],
+    [
+      { "type":"input", "field":"FROM",  "morse_pattern":"FROM", "auto_fill":false, "code_type":"long",  "colspan":1, "rowspan":1, "index": 0 },
+      { "type":"input", "field":"NR",    "morse_pattern":"NR",   "auto_fill":true,  "code_type":"short", "colspan":3, "rowspan":1, "index": 0 },
+      { "type":"input", "field":"TIME",  "morse_pattern":"TIME", "auto_fill":true,  "code_type":"short", "colspan":3, "rowspan":1, "index": 0 },
+      { "type":"input", "field":"SIGN",  "morse_pattern":null,   "auto_fill":false, "code_type":"short", "colspan":3, "rowspan":1, "index": 0 }
+    ],
+    [
+      { "type":"label", "label":"发往",   "colspan" :1 , "rowspan":1 },
+      { "type":"input", "field":"TO",    "morse_pattern":"TO",   "auto_fill":true,  "code_type":"long",  "colspan":9 , "rowspan":1, "index": 0 }
+    ],
+    [
+      { "type":"label", "label":"附注",   "colspan" :1 , "rowspan":1 },
+      { "type":"input", "field":"RMKS",  "morse_pattern":"RMKS", "auto_fill":true,  "code_type":"long",   "colspan":9 , "rowspan":1, "index": 0 }
+    ]
+  ],
+  "body":{
+    "page_row":1,
+    "row_cells": 1
+  },
+  "comment":[
+    "报文格式定义规则：",
+    "name: 格式名称，用于显示和检索。",
+    "head: 是一个二维数组 X[ Y{} ]，每个X表示表头的一行，其中每个Y表示表头一个单元格的定义。",
+    "      type: 单元格类型，type=lable表示是一个表头标题，仅用于显示，type=input表示是一个输入框，用于输入或填充表头内容",
+    "      field: 表示对应的字段存储名称",
+    "      morse_pattern: 如果单元格是一个input，morse_pattern表示其在摩尔斯码中对应的位置，为null则表示在电文报头里不存在这个field",
+    "                     比如'NR'（或'NR 0')）表示紧跟在NR后的第一个代码，'CK 1' 表示CK后的第二个代码，以此类推",
+    "      auto_fill: 如果单元格是一个input，auto_fill表示这个单元格是否需要自动填充(true/false)",
+    "               （auto_fill=true的情况下，如果是发送，需要填充到表头发送的报文里，如果是接收，则表示需要根据收到的电码进行自动填充）",
+    "      code_type: 表示这个input是长码还是短码(long/sort)",
+    "      colspan: 表示这个单元格的宽度是横跨几列单元格",
+    "      rowspan: 表示这个单元格的高度是纵跨几行单元格",
+    "body: body表示报文正文，只有一个属性page_row, 表示一页电报纸上会有多少行，一般为10的整数倍，如10, 30等，用于辅助OCR识别"
+  ]
+}

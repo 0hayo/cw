@@ -1,0 +1,47 @@
+@import "~less/theme.less";
+
+.mts-rs-button {
+  // padding: 8px;
+  height: 40px;
+  min-width: 40px;
+  background: @mc-grey-color;
+  color: @mc-text-color;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 8px;
+
+  span {
+    margin-left: 8px;
+  }
+
+  &__active {
+    box-shadow: -2px -2px 8px #374063, 2px 2px 8px #080c1e;
+    color: @mc-green-color;
+  }
+  .rs-icon-inactive {
+    background-image: url("../../images/radar-white.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+  }
+  .rs-icon-active {
+    background-image: url("../../images/radar-green.png");
+    background-size: 18px;
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 0.8;
+    background-color: #374063;
+    box-shadow: -2px -2px 8px #374063, 2px 2px 8px #080c1e;
+    border: 1px solid @mc-green-color;
+    color: @mc-green-color;
+  }
+}
