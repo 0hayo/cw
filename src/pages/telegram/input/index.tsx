@@ -1,5 +1,5 @@
 import "./index.less";
-import React, { FC, useState } from "react";
+import React, { FC } from "react";
 import McButton from "components/mc-button";
 import withTabbar from "hoc/withTabbar";
 import McTelegramEditor from "components/mc-editor/input";
@@ -37,8 +37,6 @@ const McTelegramInput: FC = () => {
   useAutoCK(form, setForm);
   const content = usePreview(form.type, form.name, form.head, form.body, 1.0);
   const previewHeight = useAutoHeight("main-container", 32);
-
-  const [type, setType] = useState<boolean>();
 
   return (
     <MstPanel title="录入报文" className="mc-telegram-input">
@@ -126,7 +124,6 @@ const McTelegramInput: FC = () => {
         }}
         onCancel={() => setProp("modal")(false)}
         onChange={x => setForm({ ...form, ...x })}
-        onType={x => setType(x)}
         onExit={() => history.push("/telegram")}
       >
         将保存为待发报文，请输入报文名称：

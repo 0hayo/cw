@@ -34,6 +34,7 @@ const McChatModal: FC<IProps> = props => {
   const [text, setText] = useState("");
   const [uuid, setUuid] = useState(props.uuid);
   const [found, setFound] = useState<Message>();
+  const [foundRx, setFoundRx] = useState<Message>();
   const [position, setPosition] = useState(0);
 
   // const [playing, setPlaying] = useState(false);
@@ -51,7 +52,9 @@ const McChatModal: FC<IProps> = props => {
     }
     if (_found) {
       setFound(_found);
+      setFoundRx(_found.type === "tx" && props.messages.length > 0 ? getFound() : _found);
     }
+    // eslint-disable-next-line
   }, [uuid, props.feed, props.messages]);
 
   useEffect(() => {
@@ -67,6 +70,14 @@ const McChatModal: FC<IProps> = props => {
       container.scrollTop = dom.offsetTop;
     }
   }, [uuid]);
+
+  const getFound = (i = 0) => {
+    if (props.messages[i].type === "rx") {
+      return props.messages[i];
+    } else {
+      getFound(i++);
+    }
+  };
 
   return (
     <McModalNice
@@ -95,7 +106,7 @@ const McChatModal: FC<IProps> = props => {
       />
       <div className="mc-chat-modal__flex">
         {/*<McSpect file={props.file} message={found} position={position} />*/}
-        <McSpect file={found?.path} message={found} position={position} />
+        <McSpect file={foundRx?.path} message={foundRx} position={position} />
         {/*<McGraph message={found} />*/}
         <McAudioPlayer
           active={player.active}
@@ -146,9 +157,11 @@ const McChatModal: FC<IProps> = props => {
             //   ];
             // const offset =
             //   isNaN(charOffset) || charOffset - PRE_OFFSET < 0 ? 0 : charOffset - PRE_OFFSET;
-            const offset = found.origin?.offsets[position];
+            let founds = found.type === "tx" ? getFound() : found;
+            const offset = founds.origin?.offsets[position];
             player?.stop();
-            offset ? player.play(found.path, offset, found.length) : player.play("/home/szt/.morsed/files//sound/202207251628250ccac01500624aa9bb833d9d56a67073.raw", 517011, 1498968);
+
+            player.play(founds.path, offset, founds.length);
           }}
         />
         <McBox textAlign="center">

@@ -25,7 +25,6 @@ interface IProps {
   onSubmit?: (goTx: boolean) => void;
   onChange: (data: IForm) => void;
   onExit: () => void;
-  onType?: (x: any) => void;
 }
 
 const McSaveModal: FC<IProps> = ({
@@ -38,7 +37,6 @@ const McSaveModal: FC<IProps> = ({
   onCancel,
   onChange,
   onExit,
-  onType,
   children,
   loading = false,
   send = false,

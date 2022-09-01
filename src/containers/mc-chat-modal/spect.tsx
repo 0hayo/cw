@@ -52,11 +52,6 @@ const McSpect: FC<IProps> = ({ file, message, position }) => {
       console.log("message=", message);
       // exec(`spectrogram -file ${message.path} -offset ${offset} -length ${length}`, {
       // alert(offset);
-      if (!offset) {
-        file = "/home/szt/.morsed/files//sound/202207251628250ccac01500624aa9bb833d9d56a67073.raw";
-        offset = 517011;
-        length = 1498968
-      }
       exec(`spectrogram -file ${file} -offset ${offset} -length ${length}`, {
         onData: payload => {
           console.log("Spectrogram=", payload);
