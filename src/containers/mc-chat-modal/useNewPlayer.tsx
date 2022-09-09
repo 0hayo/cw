@@ -18,6 +18,7 @@ const usePlayer = (): {
   active: boolean;
   stop: VoidFunction;
   play: (file: string, offset: number, length: number) => void;
+  playText: (text: string, position: number) => void;
 } => {
   // const SAMPLE_RATE = 16000;
   const SAMPLE_RATE = 6000;
@@ -51,9 +52,8 @@ const usePlayer = (): {
     }
     playerRef.current.volume(0.5);
 
-    const cmd = `playback -file ${file} -offset ${offset} -length ${length} -ip=${
-      getControlRadio().ip
-    } -radioUuid=${getControlRadio().radioUuid}`;
+    const cmd = `playback -file ${file} -offset ${offset} -length ${length} -ip=${getControlRadio().ip
+      } -radioUuid=${getControlRadio().radioUuid}`;
     socketRef.current = new Socket();
     // socketRef.current = _socket;
     socketRef.current.connect(kPORT, bizServerAddress, () => {
@@ -96,6 +96,39 @@ const usePlayer = (): {
     });
   }, []);
 
+  const playText = useCallback((text: string, position: number) => {
+    window.cancelAnimationFrame(tid.current);
+    socketRef.current && socketRef.current.end();
+
+    let v = text;
+    if (position > 0) {
+      const left = text.slice(0, position);
+      const right = text.slice(position);
+      if (left.length === 0 || left.charAt(left.length - 1) === " ") {
+        v = right.split(" ")[0];
+      } else if (right.length === 0) {
+        v = left.split(" ").pop();
+      } else if (right.charAt(0) === " ") {
+        v = right.trim().split(" ")[0];
+      } else {
+        v = left.split(" ").pop() + right.split(" ")[0];
+      }
+    }
+
+    const cmd = `playbacksend -file ${v.replaceAll(" ", "-")} -ip=${getControlRadio().ip
+      } -radioUuid=${getControlRadio().radioUuid}`;
+
+    socketRef.current = new Socket();
+    socketRef.current.connect(kPORT, bizServerAddress, () => {
+      socketRef.current.write(cmd + EOL);
+    });
+
+    setData({
+      played: 0,
+      active: true,
+    });
+  }, []);
+
   // useEffect(() => {
   //   return () => {
   //     window.clearTimeout(tid.current);
@@ -106,6 +139,7 @@ const usePlayer = (): {
   return {
     play,
     stop,
+    playText,
     played: data.played,
     active: data.active,
   };

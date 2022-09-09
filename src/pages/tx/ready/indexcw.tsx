@@ -521,7 +521,6 @@ const McReadyCwPage: FC<IProps> = ({ uuid, types, cwForm, setCwForm, listFlag })
                   <McButton
                     icon="send"
                     type="primary"
-                    disabled={form.autoFlag === 1}
                     title="手动控制继续发报"
                     onClick={() => {
                       // sender.emit(pausePage);

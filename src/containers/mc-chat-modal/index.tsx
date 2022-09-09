@@ -127,6 +127,10 @@ const McChatModal: FC<IProps> = props => {
           // }}
           onPlay={() => {
             player.stop();
+            if (found.type === "tx") {
+              player.playText(found.crude, 0);
+              return;
+            }
             if (found && found.path && found.offset !== undefined && found.length) {
               player.play(found.path, found.offset, found.length);
             }
@@ -138,30 +142,34 @@ const McChatModal: FC<IProps> = props => {
           onChange={text => setText(text)}
           onSelect={(text, position) => {
             setPosition(position);
-            const originCharArr = found.origin?.text.split("");
-            const originOffsets: number[] = [];
-            originCharArr?.map((x, i) => {
-              if (x !== ",") {
-                originOffsets.push(found.origin?.offsets[i] ? found.origin?.offsets[i] : 0);
-              }
-              return x;
-            });
-            /** 向前的偏移量 */
-            // const PRE_OFFSET = 0 * 1000 * 16;
-            /** 向后的偏移量 */
-            // const CUT_LENGTH = 6 * 1000 * 16;
+            if (found.type === "tx") {
+              player.playText(found.crude, position);
+            } else {
+              const originCharArr = found.origin?.text.split("");
+              const originOffsets: number[] = [];
+              originCharArr?.map((x, i) => {
+                if (x !== ",") {
+                  originOffsets.push(found.origin?.offsets[i] ? found.origin?.offsets[i] : 0);
+                }
+                return x;
+              });
+              /** 向前的偏移量 */
+              // const PRE_OFFSET = 0 * 1000 * 16;
+              /** 向后的偏移量 */
+              // const CUT_LENGTH = 6 * 1000 * 16;
 
-            // const charOffset =
-            //   originOffsets[
-            //     position && !isNaN(position) ? (position - 1 > 0 ? position - 1 : 0) : 0
-            //   ];
-            // const offset =
-            //   isNaN(charOffset) || charOffset - PRE_OFFSET < 0 ? 0 : charOffset - PRE_OFFSET;
-            // let founds = found.type === "tx" ? getFound() : found;
-            const offset = found.origin?.offsets[position];
-            player?.stop();
+              // const charOffset =
+              //   originOffsets[
+              //     position && !isNaN(position) ? (position - 1 > 0 ? position - 1 : 0) : 0
+              //   ];
+              // const offset =
+              //   isNaN(charOffset) || charOffset - PRE_OFFSET < 0 ? 0 : charOffset - PRE_OFFSET;
+              // let founds = found.type === "tx" ? getFound() : found;
+              const offset = found.origin?.offsets[position];
+              player?.stop();
 
-            player.play(found.path, offset, found.length);
+              player.play(found.path, offset, found.length);
+            }
           }}
         />
         <McBox textAlign="center">

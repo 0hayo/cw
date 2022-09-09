@@ -162,7 +162,8 @@ if (!gotTheLock) {
   });
 
   if (process.platform === "linux") {
-    app.commandLine.appendSwitch("disable-gpu");
+    // app.commandLine.appendSwitch("force_high_performance_gpu");
+    // app.commandLine.appendSwitch("disable-gpu");
     app.on("ready", () => setTimeout(createWindow, 500));
   } else {
     app.on("ready", createWindow);

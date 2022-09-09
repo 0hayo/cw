@@ -16,6 +16,7 @@ import { Dropdown, Menu } from "antd";
 import { getRadioUuid, getContactId } from "misc/env";
 import MstContext from "containers/mst-context/context";
 import guid from "misc/guid";
+import getTemperature from "services/dev-temperature";
 
 const McMainMenu: FC = () => {
   const [toggle, setToggle] = useState(false);
@@ -25,7 +26,7 @@ const McMainMenu: FC = () => {
   const { radioIp } = useContext(MstContext);
   const [radioUuid] = useState<String>(getRadioUuid());
   const [contactId] = useState<String>(getContactId());
-  const [cpuTemperature, setCpuTemperature] = useState(50);
+  const [cpuTemperature, setCpuTemperature] = useState(37);
   const [devTemperature, setDevTemperature] = useState(30);
 
   //监测腔体温度
@@ -35,14 +36,27 @@ const McMainMenu: FC = () => {
       if (type === "CPU-TEMPER") {
         setCpuTemperature(Math.round(data.cpuTemperature));
       }
-      if (data && data.length > 0) {
-        const _devTemperature = Math.round(data[0].dev_temp);
-        setDevTemperature(_devTemperature);
-      }
+      // if (data && data.length > 0) {
+      //   const _devTemperature = Math.round(data[0].dev_temp);
+      //   setDevTemperature(_devTemperature);
+      // }
     };
     ipcRenderer.on("newSysCheckData", listenerSync);
     return () => {
       ipcRenderer.removeListener("newSysCheckData", listenerSync);
+    };
+  }, []);
+  //监测CPU温度
+  useEffect(() => {
+    const getCpuInof = async () => {
+      const n = await getTemperature();
+      setDevTemperature(Number(n));
+    };
+
+    const j = setInterval(getCpuInof, 3000);
+
+    return () => {
+      clearInterval(j);
     };
   }, []);
 
@@ -203,7 +217,7 @@ const McMainMenu: FC = () => {
             <div className="temperature-title">腔体温度</div>
             <div className="temperature-content">
               <McIcon>device-temperature</McIcon>
-              <div className="temperature-value">{devTemperature}℃</div>
+              <div className="temperature-value">{devTemperature || 35}℃</div>
             </div>
           </div>
         </div>
