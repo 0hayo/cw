@@ -97,13 +97,13 @@ const McWorkbenchHomePage: FC = () => {
     }
   };
   useCmdAckHandler(processCmdAck);
-  useEffect(() => {
-    const cmd: Command = {
-      cmd: "rtGetRadioInfo",
-      radioUuid: LOCAL_MACHINE_ID,
-    };
-    send(cmd);
-  }, [appType, send]);
+  // useEffect(() => {
+  //   const cmd: Command = {
+  //     cmd: "rtGetRadioInfo",
+  //     radioUuid: LOCAL_MACHINE_ID,
+  //   };
+  //   send(cmd);
+  // }, [appType, send]);
 
   useEffect(() => {
     const keyEventHandler = (event: KeyboardEvent) => {

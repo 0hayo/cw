@@ -155,9 +155,10 @@ const useSender = (
         // cwForm?.activeRadio?.ip &&
         // console.log(`morse-tx -speed ${form.speed} -raw ${sendText}`);
         if (!form.sendStatus || form.sendNumber === 0) {
-          setForm(x => {
-            return { ...x, sendStatus: true, sendNumber: x.sendNumber + 1 };
-          });
+          // 代码bug 会重复发送指令
+          // setForm(x => {
+          //   return { ...x, sendStatus: true, sendNumber: x.sendNumber + 1 };
+          // });
           socket.current = exec(
             `morse-tx -speed ${form.speed} -raw ${sendText}`,
             // `morse-tx -speed send -raw ${sendText}`,
@@ -298,7 +299,11 @@ const useSender = (
             };
           });
         }
-        return form;
+        return {
+          ...form,
+          sendStatus: true,
+          sendNumber: form.sendNumber + 1
+        };
       });
     },
     [socket, mounted, setForm, highlight]

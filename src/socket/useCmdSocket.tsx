@@ -64,8 +64,8 @@ const useCmdSocket = (bus: Bus): MstSocket => {
       appType === "control"
         ? "服务器总控"
         : appType === "terminal"
-        ? "服务器终端控制"
-        : "等幅报服务控制";
+          ? "服务器终端控制"
+          : "等幅报服务控制";
     const _socket = new Socket();
 
     _socket.on("error", e => {

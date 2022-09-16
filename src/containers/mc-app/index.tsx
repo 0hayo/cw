@@ -73,6 +73,16 @@ const McApp: FC<IProps> = ({ appType = "single" }) => {
     }
   }, []);
 
+  useEffect(() => {
+    const cmd: Command = {
+      cmd: "rtGetRadioInfo",
+      radioUuid: LOCAL_MACHINE_ID,
+    };
+    socket.send(cmd);
+    console.log(11111111111, cmd);
+
+  }, [appType]);
+
   return (
     <MstContext.Provider value={contextMemo}>
       <Layout className="mc-layout">
