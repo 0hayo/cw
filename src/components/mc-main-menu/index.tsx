@@ -188,6 +188,18 @@ const McMainMenu: FC = () => {
           </div>
         </div>
         <div className="menu-card">
+          <div className="menu-title">数据中心</div>
+          <div
+            className={`menu-item ${active === "setting-phrase" ? "active" : ""}`}
+            onClick={() => history.push("/statistics")}
+          >
+            <UnorderedListOutlined />
+            数据
+            <br />
+            统计
+          </div>
+        </div>
+        <div className="menu-card">
           <div className="menu-title">设置</div>
           <div
             className={`menu-item ${active === "setting-contact" ? "active" : ""}`}
