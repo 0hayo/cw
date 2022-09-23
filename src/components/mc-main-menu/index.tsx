@@ -148,6 +148,15 @@ const McMainMenu: FC = () => {
                 <Menu.Item key={guid()} onClick={() => history.push("/telegram/input?type=EX")}>
                   业务公电
                 </Menu.Item>
+                <Menu.Item
+                  key={guid()}
+                  onClick={() => history.push("/telegram/scan?type=CW&mode=video")}
+                >
+                  拍照识别
+                </Menu.Item>
+                <Menu.Item key={guid()} onClick={() => history.push("/files/import")}>
+                  文件识别
+                </Menu.Item>
               </Menu>
             }
           >

@@ -204,11 +204,11 @@ const McWorkbench7: FC = () => {
                   <Button
                     type="primary"
                     className="terminal_action_btn_recv"
-                    // onClick={() => {
-                    //   history.push(
-                    //     `/cw?radioUuid=${radioUuid}&ip=${radioIp}&mode=rx&datagramType=TELR&contactId=${contactId}`
-                    //   );
-                    // }}
+                  // onClick={() => {
+                  //   history.push(
+                  //     `/cw?radioUuid=${radioUuid}&ip=${radioIp}&mode=rx&datagramType=TELR&contactId=${contactId}`
+                  //   );
+                  // }}
                   >
                     开始收报
                     <SendOutlined rotate={135} style={{ marginTop: 6 }} />
@@ -254,7 +254,7 @@ const McWorkbench7: FC = () => {
               <div className="ready_top_name">电子报底</div>
             </div>
             <div className="telegram-list">
-              <McTelegramList onChange={() => {}} hideFun={() => {}} />
+              <McTelegramList onChange={() => { }} hideFun={() => { }} />
             </div>
           </div>
         </Body>
