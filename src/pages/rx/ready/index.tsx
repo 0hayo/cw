@@ -289,7 +289,7 @@ const McRxReady: FC<IProps> = ({ form, setForm, cwForm, setCwForm }) => {
       <div className="rx-main-panel">
         <MstPanel
           className="rx-editor-panel"
-          title={form.type === "EX" ? "收报 - 无线电信号" : "收报 - 等幅报"}
+          title={search.ywgd ? "收报 - 业务公电" : form.type === "EX" ? "收报 - 无线电信号" : "收报 - 等幅报"}
         >
           {form.type === "EX" ? (
             <McExEditor

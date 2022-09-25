@@ -10,7 +10,7 @@ import { workingMode } from "misc/env";
 import useWarn from "../useWarn";
 import cwIForm from "pages/cw/form";
 // import useRegular from "./useRegular";
-// import useSave from "../useSave";
+import useSave from "../useSave";
 // import { Modal } from "antd";
 // import message from "misc/message";
 import { useLocation } from "react-router";
@@ -22,7 +22,7 @@ const useReceive = (setForm: Dispatch<SetStateAction<IForm>>, cwForm?: cwIForm, 
   const mounted = useMounted();
   const markWarn = useWarn(setForm);
   // const regular = useRegular(setForm);
-  // const save = useSave();
+  const save = useSave(setForm);
   const location = useLocation();
   const search = useMemo(() => qs.parse(location.search), [location.search]);
   const type = search.type as TelegramBizType;
@@ -110,7 +110,7 @@ const useReceive = (setForm: Dispatch<SetStateAction<IForm>>, cwForm?: cwIForm, 
                     // }));
                     // regular.cover();
                     // regular.goto();
-                    // save(form, () => {}, cwForm);
+                    save(form, () => { }, cwForm);
                   } else if (payload.types === "1004") {
                     setForm(x => ({
                       ...x,

@@ -106,7 +106,7 @@ const McMainMenu: FC = () => {
                   key={guid()}
                   onClick={() => {
                     history.push(
-                      `/cw?radioUuid=${radioUuid}&ip=${radioIp}&mode=rx&type=EX&datagramType=TELR&contactId=${contactId}`
+                      `/cw?radioUuid=${radioUuid}&ip=${radioIp}&mode=rx&type=EX&datagramType=TELR&contactId=${contactId}&ywgd=true`
                     );
                   }}
                 >
