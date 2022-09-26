@@ -8,11 +8,11 @@ const McHeaderBanner: FC = () => {
       <div className="header_dev">
         <div className="header_list">
           <div className="mc-logo">
-            <img src={Logo} alt="LOGO" />
+            {/* <img src={Logo} alt="LOGO" /> */}
           </div>
         </div>
         {/* <div className="mc-divider"></div> */}
-        <div className="mc-header__title-text">智能收发报系统</div>
+        <div className="mc-header__title-text">短波智能收发报终端</div>
         {/* <div className="mc-divider"></div> */}
         {/* <div className="mc-app-logo">
           <img src={AppLogo} alt="LOGO" />
