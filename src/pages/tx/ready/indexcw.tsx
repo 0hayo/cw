@@ -490,7 +490,7 @@ const McReadyCwPage: FC<IProps> = ({ uuid, types, cwForm, setCwForm, listFlag })
                   </McButton>
                 );
               })()}
-            {!showButton && form.isStar &&
+            {form.autoFlag !== 1 && !showButton && form.isStar &&
               (() => {
                 if (form.transmit) {
                   return (
@@ -498,6 +498,7 @@ const McReadyCwPage: FC<IProps> = ({ uuid, types, cwForm, setCwForm, listFlag })
                       danger
                       icon="pause"
                       type="primary"
+                      disabled={form.autoFlag === 1}
                       onClick={() => {
                         sendCmd("-pause");
                         // socket.current && socket.current.end();

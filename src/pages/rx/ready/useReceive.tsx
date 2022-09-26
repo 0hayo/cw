@@ -9,7 +9,7 @@ import { useEffect, Dispatch, SetStateAction, useRef, useMemo } from "react";
 import { workingMode } from "misc/env";
 import useWarn from "../useWarn";
 import cwIForm from "pages/cw/form";
-// import useRegular from "./useRegular";
+import useRegular from "./useRegular";
 import useSave from "../useSave";
 // import { Modal } from "antd";
 // import message from "misc/message";
@@ -21,7 +21,7 @@ const useReceive = (setForm: Dispatch<SetStateAction<IForm>>, cwForm?: cwIForm, 
   const socket = useRef<Socket>();
   const mounted = useMounted();
   const markWarn = useWarn(setForm);
-  // const regular = useRegular(setForm);
+  const regular = useRegular(setForm);
   const save = useSave(setForm);
   const location = useLocation();
   const search = useMemo(() => qs.parse(location.search), [location.search]);
@@ -59,18 +59,23 @@ const useReceive = (setForm: Dispatch<SetStateAction<IForm>>, cwForm?: cwIForm, 
                 if (payload.tag === "Result") {
                   if (payload.types === "print") {
                     message.success("收报完成", "报文已抄收完毕并完成自动校对。", true);
-                    setForm(x => ({
-                      ...x,
-                      state: "check",
-                      regular: {
-                        head: { ...x.head },
-                        body: { ...x.body },
-                        page: x.page,
-                        size: x.size,
-                        offset: 0,
-                        role: "head",
-                      },
-                    }));
+                    setForm(x => {
+                      const  obj: IForm = {
+                        ...x,
+                        state: "check",
+                        regular: {
+                          head: { ...x.head },
+                          body: { ...x.body },
+                          page: x.page,
+                          size: x.size,
+                          offset: 0,
+                          role: "head",
+                        },
+                      }
+                      save(obj, () => { }, cwForm);
+                      message.success("保存完成", "报文已自动保存。", true);
+                      return obj;
+                    });
                     // setForm(x => {
                     //   // console.log("before", x["head"]["CLS"]);
                     //   // let grade1 = "加急";
@@ -110,7 +115,11 @@ const useReceive = (setForm: Dispatch<SetStateAction<IForm>>, cwForm?: cwIForm, 
                     // }));
                     // regular.cover();
                     // regular.goto();
-                    save(form, () => { }, cwForm);
+                    // setTimeout(() => {
+                    //   console.log(11111111,form)
+                    //   save(form, () => { }, cwForm);
+                    //   message.success("保存完成", "报文已自动保存。", true);
+                    // }, 1000);
                   } else if (payload.types === "1004") {
                     setForm(x => ({
                       ...x,
